@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Tue, 04 Feb 2014 23:22:56 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1778'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":184,"image_url":"http://lh6.ggpht.com/jI3hOlmg0IGwbkpJGQWoCdt-JrKv8NsZRTOynD_wnue_LM2g559Ig7S1oZY7IPvF_LntKQA1Awmtca1RfEAP=s360-c","ingredient_list":"---
+        []\n","name":"Romano Ranch Chicken and Rice Skillet Dinner","seconds":0,"servings":"4","source_url":"http://picky-palate.com/2009/10/26/romano-ranch-chicken-and-rice-skillet-dinner/","total_time":null,"yummly_id":"Romano-ranch-chicken-and-rice-skillet-dinner-334839"}},"ingredients":[{"ingredient":{"description":"2
+        large boneless skinless chicken breasts","id":1800,"recipe_id":184}},{"ingredient":{"description":"1
+        packet Ranch Dressing dry mix, divided","id":1801,"recipe_id":184}},{"ingredient":{"description":"1/4
+        Cup extra virgin olive oil (what I used) or you can also use veg oil","id":1802,"recipe_id":184}},{"ingredient":{"description":"1
+        large onion, finely diced","id":1803,"recipe_id":184}},{"ingredient":{"description":"1
+        green bell pepper, diced","id":1804,"recipe_id":184}},{"ingredient":{"description":"6
+        cloves fresh garlic, minced","id":1805,"recipe_id":184}},{"ingredient":{"description":"6
+        Cups fresh spinach leaves, coarsely chopped","id":1806,"recipe_id":184}},{"ingredient":{"description":"1
+        small can diced carrots and peas, drained","id":1807,"recipe_id":184}},{"ingredient":{"description":"2
+        Cups steamed long grain brown rice (I cooked mine in a rice cooker)","id":1808,"recipe_id":184}},{"ingredient":{"description":"1
+        teaspoon kosher salt","id":1809,"recipe_id":184}},{"ingredient":{"description":"1/4
+        teaspoon fresh cracked black pepper","id":1810,"recipe_id":184}},{"ingredient":{"description":"1/4
+        teaspoon Lawry\u2019s garlic salt with parsley","id":1811,"recipe_id":184}},{"ingredient":{"description":"1/2
+        Cup shredded Romano Cheese","id":1812,"recipe_id":184}}]}'
+    http_version: 
+  recorded_at: Tue, 04 Feb 2014 23:22:56 GMT
+recorded_with: VCR 2.8.0

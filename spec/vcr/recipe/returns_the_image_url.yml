@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Tue, 04 Feb 2014 23:38:08 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1765'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":173,"image_url":"http://lh6.ggpht.com/5lbPfoqOywPj3BGf1NPeGxhW_B_3YuSRz-lqW1NcPoy9dt01w1hdL-1xZu9CcIQ0UxrhDUYvUBTo3UyB1PEiHg=s360-c","ingredient_list":"---
+        []\n","name":"Asian Spinach Salad with Chicken, Mushrooms, Peppers, and Almonds","seconds":1800,"servings":"2","source_url":"http://www.kalynskitchen.com/2006/04/weekend-herb-blogging-27-spinachasian.html","total_time":"30
+        min","yummly_id":"Asian-spinach-salad-with-chicken_-mushrooms_-peppers_-and-almonds-309969"}},"ingredients":[{"ingredient":{"description":"2
+        boneless, skinless chicken breasts","id":1697,"recipe_id":173}},{"ingredient":{"description":"1
+        cup sliced sweet mini-peppers or red pepper strips (red, yellow, or orange)","id":1698,"recipe_id":173}},{"ingredient":{"description":"4-6
+        oz. sliced mushrooms, sauteed","id":1699,"recipe_id":173}},{"ingredient":{"description":">1/4
+        cup slivered almonds","id":1700,"recipe_id":173}},{"ingredient":{"description":"2-3
+        green onions, sliced","id":1701,"recipe_id":173}},{"ingredient":{"description":"4
+        handfuls baby spinach (I buy prewashed spinach, wash if needed)","id":1702,"recipe_id":173}},{"ingredient":{"description":"2
+        T rice vinegar","id":1703,"recipe_id":173}},{"ingredient":{"description":"1
+        1/2 T soy sauce","id":1704,"recipe_id":173}},{"ingredient":{"description":"2
+        tsp Splenda, sugar, or Stevia Granulated","id":1705,"recipe_id":173}},{"ingredient":{"description":"1/2
+        tsp. sesame oil","id":1706,"recipe_id":173}},{"ingredient":{"description":"1/4
+        tsp. ginger puree (also called ground ginger)","id":1707,"recipe_id":173}},{"ingredient":{"description":"1/4
+        tsp. Sriracha Sauce (or more if you want it spicy)","id":1708,"recipe_id":173}},{"ingredient":{"description":"2
+        T olive oil","id":1709,"recipe_id":173}}]}'
+    http_version: 
+  recorded_at: Tue, 04 Feb 2014 23:38:08 GMT
+recorded_with: VCR 2.8.0
