@@ -2,7 +2,7 @@ require_relative '../spec_helper.rb'
 
 describe 'visiting dashboard' do
 
-  it 'has links to cupboard and recipes' do
+  xit 'has links to cupboard and recipes' do
     visit root_path
     within('#nav') do
       expect(page).to have_content('Cupboard')
@@ -10,7 +10,7 @@ describe 'visiting dashboard' do
     end
   end
 
-  it 'displays a recipe' do
+  xit 'displays a recipe' do
     visit recipe_path
 
     within('#recipe') do
