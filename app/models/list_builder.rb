@@ -4,7 +4,7 @@ class ListBuilder
 
   def initialize(user, recipes)
     @user = user
-    @recipes = recipes
+    @recipes = [recipes].flatten
   end
 
   def format_user_information
@@ -18,7 +18,7 @@ class ListBuilder
   end
 
   def prepared_to_send
-    {"user" => format_user_information, "recipes" => recipes}
+    {"user" => format_user_information, "recipes" => format_recipes}
   end
 
   def to_send

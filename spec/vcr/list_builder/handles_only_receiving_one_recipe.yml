@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 22:36:25 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '942'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":47,"image_url":"http://lh3.ggpht.com/6IktM4KBPl8ZmDIgnLM8mmms587sy7tF0UMy6MTbim1ku27hLw-wXshr6EsdLxZLPIKIdJBSqrTW3B6vhpF-=s360-c","ingredient_list":"---
+        []\n","name":"Homemade Chicken Strips","seconds":0,"servings":"6","source_url":"http://thepioneerwoman.com/cooking/2009/05/quickie-homemade-chicken-strips/","total_time":null,"yummly_id":"Homemade-Chicken-Strips-The-Pioneer-Woman-Cooks-_-Ree-Drummond-41347"}},"ingredients":[{"ingredient":{"description":"1
+        package chicken breasts, cut into strips (sometimes called tenders or strips)","id":432,"recipe_id":47}},{"ingredient":{"description":"buttermilk","id":433,"recipe_id":47}},{"ingredient":{"description":"1-1/2
+        cup flour","id":434,"recipe_id":47}},{"ingredient":{"description":"2 teaspoons
+        (to 3 teaspoons) lawry''s seasoning salt (or spices of your choosing)","id":435,"recipe_id":47}},{"ingredient":{"description":"vegetable
+        oil","id":436,"recipe_id":47}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 22:36:25 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 22:36:25 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1213'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":90,"image_url":"http://lh6.ggpht.com/Jq8-QeaYX1ohf9-ZQ8AR4_5Su8Gds_DfxJEaGBejh3pwFupTrAWzQi7Pvm564tbsnbx-9ZJc7U768e8dfxT-sH4=s360-c","ingredient_list":"---
+        []\n","name":"Chicken Burgers","seconds":2400,"servings":"4","source_url":"http://www.marthastewart.com/315255/chicken-burgers","total_time":"40
+        Min","yummly_id":"Chicken-Burgers-Martha-Stewart"}},"ingredients":[{"ingredient":{"description":"2
+        tablespoons vegetable oil, such as safflower","id":872,"recipe_id":90}},{"ingredient":{"description":"1
+        small onion, finely chopped","id":873,"recipe_id":90}},{"ingredient":{"description":"1/2
+        yellow or orange bell pepper, chopped","id":874,"recipe_id":90}},{"ingredient":{"description":"1
+        celery stalk, finely chopped","id":875,"recipe_id":90}},{"ingredient":{"description":"coarse
+        salt and ground pepper","id":876,"recipe_id":90}},{"ingredient":{"description":"coarse
+        salt and ground pepper","id":877,"recipe_id":90}},{"ingredient":{"description":"1
+        pound ground dark-meat chicken","id":878,"recipe_id":90}},{"ingredient":{"description":"4
+        hamburger buns","id":879,"recipe_id":90}},{"ingredient":{"description":"lettuce,
+        tomato, and mayonnaise, for serving","id":880,"recipe_id":90}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 22:36:25 GMT
+recorded_with: VCR 2.8.0
