@@ -1,12 +1,19 @@
 class ListBuilder
 
-  def initialize(recipe, user_id)
-    @recipe = recipe
-    @user_id = user_id
+  attr_reader :user, :recipes
+
+  def initialize(user, recipes)
+    @user = user
+    @recipes = recipes
+  end
+
+  def format_user_information
+    {"user_id" => user.id, "email" => user.email}
   end
 
   def to_send
-    @recipe.to_json
+    {"user" => format_user_information, "recipes" => recipes}.to_json
+    #recipes.to_json
   end
 
 end

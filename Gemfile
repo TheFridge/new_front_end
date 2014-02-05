@@ -15,9 +15,11 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-rails'
+  gem 'launchy'
   gem 'vcr'
   gem 'webmock'
   gem 'pry'
+
 end
 
 group :doc do
