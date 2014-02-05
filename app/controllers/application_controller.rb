@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :require_login
 
   def current_user
-    cookies.signed['email']
+    User.find_or_create_by(:email => cookies.signed['email']) if cookies.signed['email']
   end
 
   def require_login

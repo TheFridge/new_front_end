@@ -3,6 +3,7 @@
   <%= link_to 'Find Recipes', recipe_path %>
 </div>
 
-stuff
-<%= @email.to_s %>
-more stuff
+<div>
+  <p><%= current_user.email %></p>
+  <p><%= current_user.id %></p>
+</div>
