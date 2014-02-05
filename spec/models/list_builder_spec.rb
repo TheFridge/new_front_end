@@ -17,9 +17,14 @@ describe ListBuilder do
     expect(@list_builder_hash.keys).to eq(["user", "recipes"])
   end
 
-  it "has correct user hash keys", :vcr do
-    puts @list_builder_hash["recipes"].inspect
-    expect(@list_builder_hash["user"].keys).to eq(["user_id", "email"])
+  it "correctly formats user information", :vcr do
+    expect(@list.format_user_information.keys).to eq(["user_id", "email"])
+    expect(@list.format_user_information['email']).to eq("email@example.com")
+    expect(@list.format_user_information['user_id']).to eq(@user.id)
+  end
+
+  it "correctly formats prepared to send information", :vcr do
+    expect(@list.prepared_to_send.keys).to eq(["user", "recipes"])
   end
 
 end

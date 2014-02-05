@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 20:13:49 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '935'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":169,"image_url":"http://lh3.ggpht.com/EsO169KplQustkA-4rE2XGvzhI8BRRL3yweYXkKpHZBvouOJSlm9W_sNU813sTPjGp_KKs6FEKTxvfxLSE5z-w=s360-c","ingredient_list":"---
+        []\n","name":"Classic Baked Chicken","seconds":0,"servings":"4","source_url":"http://simplyrecipes.com/recipes/classic_baked_chicken/","total_time":null,"yummly_id":"Classic-Baked-Chicken-Simply-Recipes-42885"}},"ingredients":[{"ingredient":{"description":"3
+        to 4 lb chicken, cut into 8 parts (2 breasts, 2 thighs, 2 legs, 2 wings) excluding
+        the back","id":1655,"recipe_id":169}},{"ingredient":{"description":"olive
+        oil","id":1656,"recipe_id":169}},{"ingredient":{"description":"salt and freshly
+        ground pepper","id":1657,"recipe_id":169}},{"ingredient":{"description":"salt
+        and freshly ground pepper","id":1658,"recipe_id":169}},{"ingredient":{"description":"1/2
+        cup of chicken stock or white wine for the gravy (optional)","id":1659,"recipe_id":169}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 20:13:51 GMT
+recorded_with: VCR 2.8.0
