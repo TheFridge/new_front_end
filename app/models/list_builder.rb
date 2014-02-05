@@ -1,8 +1,8 @@
 class ListBuilder
 
-  def initialize(recipe, user_id)
-    @recipe = recipe
-    @user_id = user_id
+  def initialize(user, recipes)
+    @user = user
+    @recipes = recipes
   end
 
   def to_send
