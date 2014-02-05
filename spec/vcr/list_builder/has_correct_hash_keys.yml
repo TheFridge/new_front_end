@@ -21,7 +21,7 @@ http_interactions:
       Content-Type:
       - text/html;charset=utf-8
       Date:
-      - Wed, 05 Feb 2014 18:59:13 GMT
+      - Wed, 05 Feb 2014 20:31:28 GMT
       Server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       X-Content-Type-Options:
@@ -31,20 +31,70 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
-      - '952'
+      - '1131'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"recipe":{"recipe":{"id":96,"image_url":"http://lh3.ggpht.com/MCQ3cl6itMRL4jmsYqxQXKvRZp_8_BEKWA99_WdWwEX61gFA2H_qVaZtAMeg0zYNGRhgeLzK7MOuN1jEuIr_Zw=s360-c","ingredient_list":"---
-        []\n","name":"Jenny''s Grilled Chicken Breasts","seconds":2700,"servings":"4","source_url":"http://allrecipes.com/Recipe/jennys-grilled-chicken-breasts/detail.aspx","total_time":"45
-        Min","yummly_id":"Jenny_s-Grilled-Chicken-Breasts-Allrecipes"}},"ingredients":[{"ingredient":{"description":"4
-        skinless, boneless chicken breast halves","id":940,"recipe_id":96}},{"ingredient":{"description":"1/2
-        cup lemon juice","id":941,"recipe_id":96}},{"ingredient":{"description":"1/2
-        teaspoon onion powder","id":942,"recipe_id":96}},{"ingredient":{"description":"ground
-        black pepper to taste","id":943,"recipe_id":96}},{"ingredient":{"description":"seasoning
-        salt to taste","id":944,"recipe_id":96}},{"ingredient":{"description":"2 teaspoons
-        dried parsley","id":945,"recipe_id":96}}]}'
+      string: '{"recipe":{"recipe":{"id":27,"image_url":"http://lh6.ggpht.com/s1JKZy3riw6p54rlTinK13yJ-Qg8ypOkyokwZ6ip22_WPjpOUvt8p_wx7GlHrJeFzUe2_y_luCx4wVmh3pim0RE=s360-c","ingredient_list":"---
+        []\n","name":"Honey-Mustard Baked Chicken Recipe","seconds":6300,"servings":"7","source_url":"http://www.chow.com/recipes/27741-honey-mustard-baked-chicken","total_time":"1
+        hr 45 min","yummly_id":"Honey-Mustard-Baked-Chicken-Recipe-Chow-56214"}},"ingredients":[{"ingredient":{"description":"2
+        (3- to 3-1/2-pound) broiler chicken, cut into 8 pieces (ask your butcher to
+        do this)","id":247,"recipe_id":27}},{"ingredient":{"description":"1/2 cup
+        dijon mustard","id":248,"recipe_id":27}},{"ingredient":{"description":"1/2
+        cup honey","id":249,"recipe_id":27}},{"ingredient":{"description":"1/4 cup
+        olive oil","id":250,"recipe_id":27}},{"ingredient":{"description":"1 tablespoon
+        kosher salt","id":251,"recipe_id":27}},{"ingredient":{"description":"1 teaspoon
+        garlic powder or 2 minced garlic cloves","id":252,"recipe_id":27}},{"ingredient":{"description":"1
+        teaspoon dried parsley or 2 tablespoons minced fresh italian parsley","id":253,"recipe_id":27}}]}'
     http_version: 
-  recorded_at: Wed, 05 Feb 2014 18:59:12 GMT
+  recorded_at: Wed, 05 Feb 2014 20:31:29 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 20:31:28 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1174'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":8,"image_url":"http://lh4.ggpht.com/qJlYba9TvEljM56ztRBQ_Wr6gLNkTkKiu4kmn-yH5CGk0xEOnF39mu9u1vBfWyUV9n3HN8aVHqXcO_nc-s4_=s360-c","ingredient_list":"---
+        []\n","name":"CPK\u2019s BBQ Chicken Pizza","seconds":0,"servings":"12","source_url":"http://thepioneerwoman.com/cooking/2010/03/cpks-bbq-chicken-pizza/","total_time":null,"yummly_id":"CPK_s-BBQ-Chicken-Pizza-The-Pioneer-Woman-45679"}},"ingredients":[{"ingredient":{"description":"1
+        whole recipe for pizza crust (mine makes two crusts)","id":72,"recipe_id":8}},{"ingredient":{"description":"2
+        whole boneless, skinless chicken breasts","id":73,"recipe_id":8}},{"ingredient":{"description":"1/2
+        cup barbecue sauce","id":74,"recipe_id":8}},{"ingredient":{"description":"olive
+        oil, for drizzling","id":75,"recipe_id":8}},{"ingredient":{"description":"salt
+        for sprinkling","id":76,"recipe_id":8}},{"ingredient":{"description":"16 ounces,
+        weight fresh mozzarella cheese, sliced thinly","id":77,"recipe_id":8}},{"ingredient":{"description":"1/2
+        whole red onion, cut in half and sliced very thin","id":78,"recipe_id":8}},{"ingredient":{"description":"chopped
+        cilantro, to taste","id":79,"recipe_id":8}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 20:31:30 GMT
 recorded_with: VCR 2.8.0

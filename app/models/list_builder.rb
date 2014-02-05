@@ -11,9 +11,18 @@ class ListBuilder
     {"user_id" => user.id, "email" => user.email}
   end
 
+  def format_recipes
+    recipes.map do |recipe|
+      {"name" => recipe.name, "source_url" => recipe.source_url, "servings" => recipe.servings, "ingredients" => recipe.ingredients}
+    end
+  end
+
+  def prepared_to_send
+    {"user" => format_user_information, "recipes" => recipes}
+  end
+
   def to_send
-    {"user" => format_user_information, "recipes" => recipes}.to_json
-    #recipes.to_json
+    prepared_to_send.to_json
   end
 
 end
