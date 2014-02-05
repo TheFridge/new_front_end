@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 20:31:29 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1386'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":190,"image_url":"http://lh4.ggpht.com/h1uxiekrf2KdjIGjNS3aMJSznROx1EPN0Xy3tei1vogCrGs-Aa0cRgTdp-UEGYm8d4X8Ako4WHAxGI0BHQ8q-A=s360-c","ingredient_list":"---
+        []\n","name":"Crispy Honey Lime Tilapia","seconds":6300,"servings":"4","source_url":"http://www.howsweeteats.com/2011/08/crispy-honey-lime-tilapia/","total_time":"1
+        hr 45 min","yummly_id":"Crispy-honey-lime-tilapia-333373"}},"ingredients":[{"ingredient":{"description":"4
+        fresh (or thawed) tilapia filets","id":1859,"recipe_id":190}},{"ingredient":{"description":"2
+        tablespoons olive oil","id":1860,"recipe_id":190}},{"ingredient":{"description":"2
+        tablespoons honey","id":1861,"recipe_id":190}},{"ingredient":{"description":"2
+        tablespoons lime juice","id":1862,"recipe_id":190}},{"ingredient":{"description":"1
+        teaspoon lime zest","id":1863,"recipe_id":190}},{"ingredient":{"description":"2
+        garlic cloves, crushed","id":1864,"recipe_id":190}},{"ingredient":{"description":"1/2
+        teaspoon salt","id":1865,"recipe_id":190}},{"ingredient":{"description":"1/2
+        teaspoon pepper","id":1866,"recipe_id":190}},{"ingredient":{"description":"1/3
+        cup flour [I used whole wheat pastry]","id":1867,"recipe_id":190}},{"ingredient":{"description":"2
+        tablespoons olive oil for frying","id":1868,"recipe_id":190}},{"ingredient":{"description":"additional
+        honey + lime zest mixed for drizzling","id":1869,"recipe_id":190}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 20:31:30 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 20:31:29 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1537'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":11,"image_url":"http://lh4.ggpht.com/-YUOKfhwWC9-bg_6w-UtiDEukD7_bA4UOdXAdVPxVHE9G2cUPccP5cG3U4fEia5PGY_vMwgPwj5D2ARorBtx=s360-c","ingredient_list":"---
+        []\n","name":"Grilled Jerk Chicken","seconds":0,"servings":"4","source_url":"http://www.onceuponachef.com/2011/04/caribbean-jerk-chicken.html","total_time":null,"yummly_id":"Grilled-Jerk-Chicken-Once-Upon-A-Chef-199994"}},"ingredients":[{"ingredient":{"description":"1
+        small onion, cut into large chunks","id":103,"recipe_id":11}},{"ingredient":{"description":"2
+        scallions, quartered","id":104,"recipe_id":11}},{"ingredient":{"description":"1
+        Scotch bonnet or Habanero chili pepper, seeded and roughly chopped*","id":105,"recipe_id":11}},{"ingredient":{"description":"1
+        garlic clove, peeled","id":106,"recipe_id":11}},{"ingredient":{"description":"1
+        teaspoon Asian five-spice powder","id":107,"recipe_id":11}},{"ingredient":{"description":"\u00bd
+        teaspoon allspice","id":108,"recipe_id":11}},{"ingredient":{"description":"\u00bd
+        teaspoon dried thyme","id":109,"recipe_id":11}},{"ingredient":{"description":"\u00bd
+        teaspoon ground nutmeg","id":110,"recipe_id":11}},{"ingredient":{"description":"\u00be
+        teaspoon salt","id":111,"recipe_id":11}},{"ingredient":{"description":"\u00bc
+        cup soy sauce","id":112,"recipe_id":11}},{"ingredient":{"description":"\u00bd
+        tablespoon vegetable oil","id":113,"recipe_id":11}},{"ingredient":{"description":"2\u00bd
+        \u2013 3 pounds bone-in, skin on chicken pieces (thighs, drumsticks and breasts)**","id":114,"recipe_id":11}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 20:31:31 GMT
+recorded_with: VCR 2.8.0
