@@ -10,7 +10,10 @@ class DashboardController < ApplicationController
   end
 
   def show
-    @email = cookies.signed["email"]
+    @recipe = Recipe.get_recipe
+  end
+
+  def cupboard
   end
 
 end
