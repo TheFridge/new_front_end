@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 00:50:13 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1041'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":34,"image_url":"http://lh5.ggpht.com/M0S4W-rBUNtoZbMHXDkFj1N-0nUszvgKMOHOutHz-JYkp4_D2ishKS4IxYHvcE32FtCMnpkW9Sa7QLp1YvP9Uw=s360-c","ingredient_list":"---
+        []\n","name":"Roast Chicken with Apples, Thyme and Shallots","seconds":6300,"servings":"4","source_url":"http://www.seriouseats.com/recipes/2012/02/roast-chicken-with-apples-thyme-and-shallots.html","total_time":"1
+        hr 45 min","yummly_id":"Roast-Chicken-with-Apples_-Thyme-and-Shallots-Serious-Eats-200513"}},"ingredients":[{"ingredient":{"description":"2
+        apples, cored and quartered","id":311,"recipe_id":34}},{"ingredient":{"description":"12
+        shallots, peeled","id":312,"recipe_id":34}},{"ingredient":{"description":"1
+        bunch thyme","id":313,"recipe_id":34}},{"ingredient":{"description":"2 tablespoons
+        olive oil, divided","id":314,"recipe_id":34}},{"ingredient":{"description":"1
+        3-4 pound chicken, rinsed and patted dry with paper towel","id":315,"recipe_id":34}},{"ingredient":{"description":"kosher
+        salt and cracked black pepper","id":316,"recipe_id":34}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 00:50:00 GMT
+recorded_with: VCR 2.8.0
