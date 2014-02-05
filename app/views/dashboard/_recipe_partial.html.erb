@@ -1,0 +1,10 @@
+<div id="recipe">
+  <h1><%= recipe.name %></h1>
+  <%= image_tag recipe.image_url %>
+  <h2>Ingredients</h2>
+  <% recipe.ingredients.each do |ingredient| %>
+    <p><%= ingredient %></p>
+   <% end %>
+   <p>Serves: <%= recipe.servings %></p>
+   <p><%= link_to "Instructions", recipe.source_url, target: "new" %>
+</div>

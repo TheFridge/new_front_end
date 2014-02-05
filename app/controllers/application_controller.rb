@@ -8,7 +8,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    User.find_or_create_by(:email => cookies.signed['email']) if cookies.signed['email']
+    #User.find_or_create_by(:email => cookies.signed['email']) if cookies.signed['email']
+      User.first
   end
 
   def require_login
