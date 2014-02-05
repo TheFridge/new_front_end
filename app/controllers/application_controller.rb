@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_action :require_login
 
+  helper_method :current_user
+
   def current_user
     User.find_or_create_by(:email => cookies.signed['email']) if cookies.signed['email']
   end
