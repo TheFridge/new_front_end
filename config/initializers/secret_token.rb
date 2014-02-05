@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-FrontEnd::Application.config.secret_key_base = '21d5e1e882e7925a7de147ca1be782f4d5a96671b17bff000d51a0d65091b1abcfa686fa6b56bbe59986b62579f1a05dab467cd5b562098cad7d87f22a50f82e'
+FrontEnd::Application.config.secret_key_base = '3bb823c7377694cc8f7d89d8f22163e896c6c68c5804b1eeb46552588c8505c56043e72e7859962d758aa1cfc260222e19374f9715947678e07c27d7c6d07529'

@@ -7,4 +7,8 @@ class DashboardController < ApplicationController
   def login
   end
 
+  def show
+    @email = cookies.signed["email"]
+  end
+
 end
