@@ -4,4 +4,7 @@ class DashboardController < ApplicationController
     @recipe = Recipe.get_recipe
   end
 
+  def login
+  end
+
 end
