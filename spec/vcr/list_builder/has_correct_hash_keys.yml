@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Wed, 05 Feb 2014 18:59:13 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '952'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":96,"image_url":"http://lh3.ggpht.com/MCQ3cl6itMRL4jmsYqxQXKvRZp_8_BEKWA99_WdWwEX61gFA2H_qVaZtAMeg0zYNGRhgeLzK7MOuN1jEuIr_Zw=s360-c","ingredient_list":"---
+        []\n","name":"Jenny''s Grilled Chicken Breasts","seconds":2700,"servings":"4","source_url":"http://allrecipes.com/Recipe/jennys-grilled-chicken-breasts/detail.aspx","total_time":"45
+        Min","yummly_id":"Jenny_s-Grilled-Chicken-Breasts-Allrecipes"}},"ingredients":[{"ingredient":{"description":"4
+        skinless, boneless chicken breast halves","id":940,"recipe_id":96}},{"ingredient":{"description":"1/2
+        cup lemon juice","id":941,"recipe_id":96}},{"ingredient":{"description":"1/2
+        teaspoon onion powder","id":942,"recipe_id":96}},{"ingredient":{"description":"ground
+        black pepper to taste","id":943,"recipe_id":96}},{"ingredient":{"description":"seasoning
+        salt to taste","id":944,"recipe_id":96}},{"ingredient":{"description":"2 teaspoons
+        dried parsley","id":945,"recipe_id":96}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Feb 2014 18:59:12 GMT
+recorded_with: VCR 2.8.0
