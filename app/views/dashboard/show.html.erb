@@ -7,3 +7,6 @@
   <p><%= current_user.email %></p>
   <p><%= current_user.id %></p>
 </div>
+
+<%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
+<%= button_tag link_to("New Recipe", dashboard_path, method: :get)%>
