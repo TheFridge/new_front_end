@@ -1,11 +1,8 @@
+<%= render partial: 'top_nav' %>
+
 <div id='nav'>
   <%= link_to 'Cupboard', cupboard_path %>
   <%= link_to 'Find Recipes', recipe_path %>
-</div>
-
-<div>
-  <p><%= current_user.email %></p>
-  <p><%= current_user.id %></p>
 </div>
 
 <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
