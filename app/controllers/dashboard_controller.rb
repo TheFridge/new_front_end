@@ -16,4 +16,8 @@ class DashboardController < ApplicationController
   def cupboard
   end
 
+  def list
+    @recipe = Recipe.get_recipe_by_id(params[:recipe_id])
+    list_builder = ListBuilder.new(current_user, @recipe).to_send
+  end
 end
