@@ -5,14 +5,9 @@
   <div class="row-fluid">
     <div class="span-12">
       <%= render partial: 'side_nav' %>
+      <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
     </div>
   </div>
 </div>
 
-<div id='nav'>
-  <%= link_to 'Cupboard', cupboard_path %>
-  <%= link_to 'Find Recipes', recipe_path %>
-</div>
-
-<%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
 <%= button_tag link_to("New Recipe", dashboard_path, method: :get)%>
