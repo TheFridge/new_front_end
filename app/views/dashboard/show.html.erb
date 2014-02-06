@@ -9,11 +9,3 @@
     </div>
   </div>
 </div>
-
-<% if @list %>
-  <div class='list'>
-    <% JSON.parse(@list.body)["list_ingredients"].each do |ingredient| %>
-      <p><%= ingredient %></p>
-    <% end %>
-  </div>
-<% end %>

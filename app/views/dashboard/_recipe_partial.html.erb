@@ -13,4 +13,6 @@
       <%= button_to "Add to Cupboard", list_path(recipe_id: recipe.id) %>
     </div>
   </div>
+
+  <%= render partial: "dashboard/list_partial", locals: {list: @list} if @list %>
 </div>
