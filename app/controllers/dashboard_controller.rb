@@ -11,6 +11,7 @@ class DashboardController < ApplicationController
 
   def show
     @recipe = Recipe.get_recipe
+    @list = ListTalker.new.find(JSON.parse(params[:list])["id"]) if params[:list]
   end
 
   def cupboard

@@ -9,6 +9,7 @@ describe ListTalker do
     @list = ListBuilder.new(@user, @recipes)
     @list_talker = ListTalker.new
   end
+
   it "setups up a connection" do
      response = @list_talker.setup_connection
      expect(response.class).to eq Faraday::Connection
@@ -17,5 +18,11 @@ describe ListTalker do
   it "posts a list", :vcr do
     response = @list_talker.post_list(@list.to_send)
     expect(response.status).to eq 201
+  end
+
+  it "returns a list", :vcr do
+    response = @list_talker.find(10)
+    list = JSON.parse(response.body)
+    expect(list.keys).to include("list_ingredients")
   end
 end
