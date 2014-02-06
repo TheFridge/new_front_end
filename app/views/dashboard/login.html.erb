@@ -1,1 +1,21 @@
-<%= link_to "Login With Facebook", hostess_path %>
+<div class='row-fluid' style='height: 100px'></div>
+<div class='container-fluid'>
+  <div class='row-fluid' >
+    <div class='span4'></div>
+    <div class='span4 login-span'>
+      <div class='login-radmin align-center'>
+        <h1 class='brand'><span class='rad'>The</span> Fridge</h1>
+      </div>
+      <div class='login-wrapper'>
+        <div class='login-inner'>
+          <div class='align-center'>
+            <h4 class='sign-in'>Welcome to The Fridge</h4>
+            <div class='squiggly-border'></div>
+            <%= link_to image_tag('facebook-button.png', size: '150x60'), hostess_path, method: 'post' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='span4'></div>
+  </div>
+</div>
