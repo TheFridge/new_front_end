@@ -10,6 +10,11 @@ gem 'jbuilder', '~> 1.2'
 gem 'faraday'
 gem 'pg'
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 group :test do
   gem 'sqlite3'
   gem 'rspec-rails'
@@ -19,7 +24,6 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'pry'
-
 end
 
 group :doc do
