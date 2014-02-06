@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'faraday'
 gem 'pg'
+gem 'icomoon-rails'
 
 group :test do
   gem 'sqlite3'
