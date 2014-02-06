@@ -1,0 +1,213 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 18:35:20 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '995'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":15,"image_url":"http://lh4.ggpht.com/lMDSi-M9whD5v7F-x10-Tujbj8DQSeRYXtb231tToEwgICKyL_A6jetUQZ3a19cOiXxA4ojJXoTtn4QyZ5FGFUg=s360-c","ingredient_list":"---
+        []\n","name":"Baked Cracker-Crusted Chicken Fingers Recipe","seconds":1800,"servings":"3","source_url":"http://www.chow.com/recipes/27464-baked-cracker-crusted-chicken-fingers","total_time":"30
+        min","yummly_id":"Baked-Cracker-Crusted-Chicken-Fingers-Recipe-Chow-55972"}},"ingredients":[{"ingredient":{"description":"1
+        1/4 cups finely crushed whole-wheat crackers, such as wheatsworth","id":145,"recipe_id":15}},{"ingredient":{"description":"1/2
+        teaspoon kosher salt","id":146,"recipe_id":15}},{"ingredient":{"description":"1/4
+        teaspoon freshly ground black pepper","id":147,"recipe_id":15}},{"ingredient":{"description":"2
+        large eggs","id":148,"recipe_id":15}},{"ingredient":{"description":"1 pound
+        chicken tenders or boneless, skinless chicken breasts cut into 5-by-1-1/2-inch
+        pieces","id":149,"recipe_id":15}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 18:35:20 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/15
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 18:35:21 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '995'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":15,"image_url":"http://lh4.ggpht.com/lMDSi-M9whD5v7F-x10-Tujbj8DQSeRYXtb231tToEwgICKyL_A6jetUQZ3a19cOiXxA4ojJXoTtn4QyZ5FGFUg=s360-c","ingredient_list":"---
+        []\n","name":"Baked Cracker-Crusted Chicken Fingers Recipe","seconds":1800,"servings":"3","source_url":"http://www.chow.com/recipes/27464-baked-cracker-crusted-chicken-fingers","total_time":"30
+        min","yummly_id":"Baked-Cracker-Crusted-Chicken-Fingers-Recipe-Chow-55972"}},"ingredients":[{"ingredient":{"description":"1
+        1/4 cups finely crushed whole-wheat crackers, such as wheatsworth","id":145,"recipe_id":15}},{"ingredient":{"description":"1/2
+        teaspoon kosher salt","id":146,"recipe_id":15}},{"ingredient":{"description":"1/4
+        teaspoon freshly ground black pepper","id":147,"recipe_id":15}},{"ingredient":{"description":"2
+        large eggs","id":148,"recipe_id":15}},{"ingredient":{"description":"1 pound
+        chicken tenders or boneless, skinless chicken breasts cut into 5-by-1-1/2-inch
+        pieces","id":149,"recipe_id":15}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 18:35:21 GMT
+- request:
+    method: post
+    uri: http://list-makr.herokuapp.com/shopping-lists
+    body:
+      encoding: UTF-8
+      string: '{"user":{"user_id":1,"email":"joe@example.com"},"recipes":[{"name":"Baked
+        Cracker-Crusted Chicken Fingers Recipe","source_url":"http://www.chow.com/recipes/27464-baked-cracker-crusted-chicken-fingers","servings":"3","ingredients":["1
+        1/4 cups finely crushed whole-wheat crackers, such as wheatsworth","1/2 teaspoon
+        kosher salt","1/4 teaspoon freshly ground black pepper","2 large eggs","1
+        pound chicken tenders or boneless, skinless chicken breasts cut into 5-by-1-1/2-inch
+        pieces"]}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 18:35:22 GMT
+      Etag:
+      - '"1c1c477f5e2fed998788a3e8c9430dd4"'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      Set-Cookie:
+      - request_method=POST; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 1aabc32f-5a7e-4d17-966a-ec96f136f97b
+      X-Runtime:
+      - '0.124088'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '153'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 11,
+          "user_id": 1,
+          "created_at": "2014-02-06T18:35:22.215Z",
+          "updated_at": "2014-02-06T18:35:22.215Z",
+          "user_email": "joe@example.com"
+        }
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 18:35:22 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 18:35:23 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1350'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":65,"image_url":"http://lh4.ggpht.com/9XfXdr8prx2v6VKSmlUY-WcwIh8BcYlqv3TrN6ftzXELYr5ru5GRmy4ROHSD9vIjSpxbMbbmy6NDq6g6vHsMKls=s360-c","ingredient_list":"---
+        []\n","name":"Steak with Burgundy Mushroom Sauce","seconds":1800,"servings":"4","source_url":"http://thepioneerwoman.com/cooking/2010/03/steak-with-burgundy-mushroom-sauce/","total_time":"30
+        min","yummly_id":"Steak-with-Burgundy-Mushroom-Sauce-The-Pioneer-Woman-Cooks-_-Ree-Drummond-41278"}},"ingredients":[{"ingredient":{"description":"4
+        whole steaks (sirloin, ribeye, etc )","id":591,"recipe_id":65}},{"ingredient":{"description":"1/2
+        cup butter","id":592,"recipe_id":65}},{"ingredient":{"description":"1 pound
+        white mushrooms, sliced","id":593,"recipe_id":65}},{"ingredient":{"description":"4
+        cloves garlic, minced","id":594,"recipe_id":65}},{"ingredient":{"description":"3
+        whole green onions, sliced","id":595,"recipe_id":65}},{"ingredient":{"description":"1-1/2
+        cup red wine: burgundy, merlot, cab, etc","id":596,"recipe_id":65}},{"ingredient":{"description":"salt
+        and pepper, to taste","id":597,"recipe_id":65}},{"ingredient":{"description":"salt
+        and pepper, to taste","id":598,"recipe_id":65}},{"ingredient":{"description":"1
+        tablespoon butter","id":599,"recipe_id":65}},{"ingredient":{"description":"fresh
+        parsley, minced, to taste","id":600,"recipe_id":65}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 18:35:23 GMT
+recorded_with: VCR 2.8.0

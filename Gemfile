@@ -24,6 +24,7 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'pry'
+  gem 'factory_girl'
 end
 
 group :doc do

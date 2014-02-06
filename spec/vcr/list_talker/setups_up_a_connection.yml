@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 17:40:38 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1601'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":70,"image_url":"http://lh4.ggpht.com/muxvDh1Pb8pyhZtEsLc2jaYexzbqu4xUWBH5U2rcH0x6iV4aNkwFXV745p8Urp5ENBXw0iznJHTxXcxnNnlk3g=s360-c","ingredient_list":"---
+        []\n","name":"Apricot Chicken","seconds":3600,"servings":"6","source_url":"http://simplyrecipes.com/recipes/apricot_chicken/","total_time":"1
+        hr","yummly_id":"Apricot-Chicken-Simply-Recipes-42534"}},"ingredients":[{"ingredient":{"description":"1
+        1/2 pounds apricots, roughly chopped, pits removed and discarded","id":659,"recipe_id":70}},{"ingredient":{"description":"1/4
+        cup sugar","id":660,"recipe_id":70}},{"ingredient":{"description":"2 Tbsp
+        cider vinegar","id":661,"recipe_id":70}},{"ingredient":{"description":"2 pounds
+        skinless chicken breasts, cut into 1 to 2-inch pieces","id":662,"recipe_id":70}},{"ingredient":{"description":"Salt","id":663,"recipe_id":70}},{"ingredient":{"description":"1
+        Tbsp unsalted butter (can sub olive oil)","id":664,"recipe_id":70}},{"ingredient":{"description":"3
+        Tbsp olive oil","id":665,"recipe_id":70}},{"ingredient":{"description":"1
+        chopped onion","id":666,"recipe_id":70}},{"ingredient":{"description":"2 cups
+        chicken stock or broth (use gluten-free stock if you are cooking gluten-free)","id":667,"recipe_id":70}},{"ingredient":{"description":"1
+        Tbsp chopped fresh rosemary","id":668,"recipe_id":70}},{"ingredient":{"description":"1
+        teaspoon cinnamon","id":669,"recipe_id":70}},{"ingredient":{"description":"2
+        teaspoons Tabasco or other hot sauce (you can add more if you like)","id":670,"recipe_id":70}},{"ingredient":{"description":"Black
+        pepper","id":671,"recipe_id":70}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 17:40:38 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 17:40:38 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '955'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":162,"image_url":"http://lh5.ggpht.com/iXweqlui-5NwmODXxM--E8PDrGtgpt1vGXL-s0sVAByLtRd6KyT6VqOlc4QVuw7ZSTSThllS7m0YuTABOUnKAA=s360-c","ingredient_list":"---
+        []\n","name":"Famous Butter Chicken","seconds":3300,"servings":"4","source_url":"http://allrecipes.com/Recipe/famous-butter-chicken/detail.aspx","total_time":"55
+        Min","yummly_id":"Famous-Butter-Chicken-Allrecipes"}},"ingredients":[{"ingredient":{"description":"2
+        eggs, beaten","id":1589,"recipe_id":162}},{"ingredient":{"description":"1
+        cup crushed buttery round cracker crumbs","id":1590,"recipe_id":162}},{"ingredient":{"description":"1/2
+        teaspoon garlic salt","id":1591,"recipe_id":162}},{"ingredient":{"description":"ground
+        black pepper to taste","id":1592,"recipe_id":162}},{"ingredient":{"description":"4
+        skinless, boneless chicken breast halves","id":1593,"recipe_id":162}},{"ingredient":{"description":"1/2
+        cup butter, cut into pieces","id":1594,"recipe_id":162}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 17:40:38 GMT
+recorded_with: VCR 2.8.0

@@ -1,0 +1,185 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 17:55:36 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1551'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":94,"image_url":"http://lh6.ggpht.com/8mNNxXg3Z_qxN0IRBR3lDxozaI_aaGRJZbo9my_Qbts_TIlWObWNEJOGT6ymviYAiyBF_qE2GDr9C5w_fUn6MA=s360-c","ingredient_list":"---
+        []\n","name":"Farfalle with Zucchini","seconds":2700,"servings":"8","source_url":"http://thepioneerwoman.com/cooking/2008/07/farfalle-with-zucchini-a-yummy-summer-meal/","total_time":"45
+        min","yummly_id":"Farfalle-with-Zucchini-The-Pioneer-Woman-41408"}},"ingredients":[{"ingredient":{"description":"4
+        whole (to 5) regular-sized zucchini","id":916,"recipe_id":94}},{"ingredient":{"description":"1
+        whole medium onion","id":917,"recipe_id":94}},{"ingredient":{"description":"grape
+        or cherry tomatoes","id":918,"recipe_id":94}},{"ingredient":{"description":"3
+        cloves garlic","id":919,"recipe_id":94}},{"ingredient":{"description":"farfalle
+        (bowtie) pasta","id":920,"recipe_id":94}},{"ingredient":{"description":"2
+        tablespoons olive oil","id":921,"recipe_id":94}},{"ingredient":{"description":"2/3
+        cups white wine (or chicken broth)","id":922,"recipe_id":94}},{"ingredient":{"description":"1
+        tablespoon arrowroot","id":923,"recipe_id":94}},{"ingredient":{"description":"1/2
+        cup (to 3/4 cup) cream","id":924,"recipe_id":94}},{"ingredient":{"description":"parmesan
+        cheese","id":925,"recipe_id":94}},{"ingredient":{"description":"fresh herbs
+        (lemon thyme, fresh basil, chives, etc )","id":926,"recipe_id":94}},{"ingredient":{"description":"salt
+        and pepper, to taste","id":927,"recipe_id":94}},{"ingredient":{"description":"salt
+        and pepper, to taste","id":928,"recipe_id":94}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 17:55:36 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 17:55:37 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1601'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":147,"image_url":"http://lh4.ggpht.com/5qwX7N9QrcJQBLxJ7DyTRkKV_sJnSylI4fhLLQ9WKLept8lD62B3Hub_TteG_gI8ayofakmyd1bFvNqIQy9Z=s360-c","ingredient_list":"---
+        []\n","name":"Roast Chicken Dinner","seconds":3000,"servings":"4","source_url":"http://www.epicurious.com/recipes/food/views/Roast-Chicken-Dinner-232787","total_time":"50
+        Min","yummly_id":"Roast-Chicken-Dinner-Epicurious"}},"ingredients":[{"ingredient":{"description":"1
+        (3- to 3 1/2-lb) chicken, quartered (see cooks'' note, below) and wing tips
+        discarded","id":1454,"recipe_id":147}},{"ingredient":{"description":"2 tablespoons
+        olive oil","id":1455,"recipe_id":147}},{"ingredient":{"description":"2 1/4
+        teaspoons salt","id":1456,"recipe_id":147}},{"ingredient":{"description":"1
+        3/4 teaspoons black pepper","id":1457,"recipe_id":147}},{"ingredient":{"description":"1
+        lb boiling potatoes, cut into 1-inch wedges","id":1458,"recipe_id":147}},{"ingredient":{"description":"2
+        zucchini (1 lb total), quartered lengthwise, then cut crosswise into 2 1/2-
+        to 3-inch lengths","id":1459,"recipe_id":147}},{"ingredient":{"description":"1
+        medium onion, halved lengthwise, then cut crosswise into 1/4-inch-thick slices","id":1460,"recipe_id":147}},{"ingredient":{"description":"1/2
+        cup reduced-sodium chicken broth","id":1461,"recipe_id":147}},{"ingredient":{"description":"1
+        tablespoon fresh lemon juice","id":1462,"recipe_id":147}},{"ingredient":{"description":"special
+        equipment: a large roasting pan (17 by 12 inches)","id":1463,"recipe_id":147}},{"ingredient":{"description":"garnish:
+        lemon wedges","id":1464,"recipe_id":147}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 17:55:37 GMT
+- request:
+    method: post
+    uri: http://list-makr.herokuapp.com/shopping-lists
+    body:
+      encoding: UTF-8
+      string: '{"user":{"user_id":1,"email":"email@example.com"},"recipes":[{"name":"Farfalle
+        with Zucchini","source_url":"http://thepioneerwoman.com/cooking/2008/07/farfalle-with-zucchini-a-yummy-summer-meal/","servings":"8","ingredients":["4
+        whole (to 5) regular-sized zucchini","1 whole medium onion","grape or cherry
+        tomatoes","3 cloves garlic","farfalle (bowtie) pasta","2 tablespoons olive
+        oil","2/3 cups white wine (or chicken broth)","1 tablespoon arrowroot","1/2
+        cup (to 3/4 cup) cream","parmesan cheese","fresh herbs (lemon thyme, fresh
+        basil, chives, etc )","salt and pepper, to taste","salt and pepper, to taste"]},{"name":"Roast
+        Chicken Dinner","source_url":"http://www.epicurious.com/recipes/food/views/Roast-Chicken-Dinner-232787","servings":"4","ingredients":["1
+        (3- to 3 1/2-lb) chicken, quartered (see cooks'' note, below) and wing tips
+        discarded","2 tablespoons olive oil","2 1/4 teaspoons salt","1 3/4 teaspoons
+        black pepper","1 lb boiling potatoes, cut into 1-inch wedges","2 zucchini
+        (1 lb total), quartered lengthwise, then cut crosswise into 2 1/2- to 3-inch
+        lengths","1 medium onion, halved lengthwise, then cut crosswise into 1/4-inch-thick
+        slices","1/2 cup reduced-sodium chicken broth","1 tablespoon fresh lemon juice","special
+        equipment: a large roasting pan (17 by 12 inches)","garnish: lemon wedges"]}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 17:55:37 GMT
+      Etag:
+      - '"151416e98e448807557f35ae3ebbd938"'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      Set-Cookie:
+      - request_method=POST; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - a92f7f70-5360-465a-b788-db64d02b2d1a
+      X-Runtime:
+      - '0.335763'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 9,
+          "user_id": 1,
+          "created_at": "2014-02-06T17:55:37.456Z",
+          "updated_at": "2014-02-06T17:55:37.456Z",
+          "user_email": "email@example.com"
+        }
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 17:55:37 GMT
+recorded_with: VCR 2.8.0

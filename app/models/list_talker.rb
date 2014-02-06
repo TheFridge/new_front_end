@@ -10,7 +10,7 @@ class ListTalker
   def setup_connection
     Faraday.new(:url => 'http://list-makr.herokuapp.com') do |faraday|
       faraday.request  :url_encoded
-      faraday.response :logger
+ #     faraday.response :logger
       faraday.adapter  Faraday.default_adapter
     end
   end

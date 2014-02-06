@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Thu, 06 Feb 2014 18:35:23 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1700'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":116,"image_url":"http://lh4.ggpht.com/9g3iyZkLonOgl4hpo9ZyOrBwI0M6X1UTLEl-NlryCTNYOFowZK7-CrVMoPfOTiTWt1UZy8Jb_-S4IiUcuHc1WA=s360-c","ingredient_list":"---
+        []\n","name":"Chicken Parmesan","seconds":0,"servings":"4","source_url":"http://simplyrecipes.com/recipes/chicken_parmesan/","total_time":null,"yummly_id":"Chicken-Parmesan-Simply-Recipes-42570"}},"ingredients":[{"ingredient":{"description":"1/2
+        large yellow onion","id":1131,"recipe_id":116}},{"ingredient":{"description":"1/4
+        cup olive oil","id":1132,"recipe_id":116}},{"ingredient":{"description":"2
+        medium garlic cloves, peeled and minced","id":1133,"recipe_id":116}},{"ingredient":{"description":"1
+        can (28 oz) crushed tomatoes (we use muir-glen)","id":1134,"recipe_id":116}},{"ingredient":{"description":"1
+        teaspoon dried oregano","id":1135,"recipe_id":116}},{"ingredient":{"description":"pinch
+        of red pepper flakes","id":1136,"recipe_id":116}},{"ingredient":{"description":"pinch
+        of sugar","id":1137,"recipe_id":116}},{"ingredient":{"description":"4 chicken
+        breast cutlets (1 1/4 to 1 1/2 pounds total)","id":1138,"recipe_id":116}},{"ingredient":{"description":"salt","id":1139,"recipe_id":116}},{"ingredient":{"description":"2
+        eggs","id":1140,"recipe_id":116}},{"ingredient":{"description":"1 cup breadcrumbs
+        (we make our breadcrumbs running pieces of stale french bread through a blender)","id":1141,"recipe_id":116}},{"ingredient":{"description":"1
+        cup freshly grated parmesan cheese","id":1142,"recipe_id":116}},{"ingredient":{"description":"2
+        tbsp fresh basil leaves, thinly sliced","id":1143,"recipe_id":116}},{"ingredient":{"description":"8
+        ounces mozzarella cheese, sliced","id":1144,"recipe_id":116}}]}'
+    http_version: 
+  recorded_at: Thu, 06 Feb 2014 18:35:23 GMT
+recorded_with: VCR 2.8.0
