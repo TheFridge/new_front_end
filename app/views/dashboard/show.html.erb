@@ -1,16 +1,14 @@
-<div id='nav'>
-  <%= link_to 'Cupboard', cupboard_path %>
-  <%= link_to 'Find Recipes', recipe_path %>
+<%= render partial: 'top_nav' %>
+<div class="row-fluid">
 </div>
-
-<div>
-  <p><%= current_user.email %></p>
-  <p><%= current_user.id %></p>
+<div class="container-fluid main-container">
+  <div class="row-fluid">
+    <div class="span-12">
+      <%= render partial: 'side_nav' %>
+      <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
+    </div>
+  </div>
 </div>
-
-<%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
-<%= button_to "Add to Cupboard", list_path(recipe_id: @recipe.id) %>
-<%= button_tag link_to("New Recipe", dashboard_path, method: :get)%>
 
 <div class='list'>
   <% JSON.parse(@list.body)["list_ingredients"].each do |ingredient| %>

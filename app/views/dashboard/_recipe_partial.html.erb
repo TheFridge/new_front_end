@@ -1,4 +1,4 @@
-<div id="recipe">
+<div class="container-fluid content-wrapper">
   <h1><%= recipe.name %></h1>
   <%= image_tag recipe.image_url %>
   <h2>Ingredients</h2>
@@ -7,4 +7,6 @@
    <% end %>
    <p>Serves: <%= recipe.servings %></p>
    <p><%= link_to "Instructions", recipe.source_url, target: "new" %>
+   <%= button_tag link_to("New Recipe", dashboard_path, method: :get)%>
+   <%= button_to "Add to Cupboard", list_path(recipe_id: recipe.id) %>
 </div>
