@@ -8,7 +8,7 @@
 ------------------------------------------------------------------------*/
 
 .fc-event-skin {
-	background: background: rgb(73,175,205); /* Old browsers */
+	background:  rgb(73,175,205); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(73,175,205,1) 0%, rgba(56,132,154,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(73,175,205,1)), color-stop(100%,rgba(56,132,154,1))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  rgba(73,175,205,1) 0%,rgba(56,132,154,1) 100%); /* Chrome10+,Safari5.1+ */

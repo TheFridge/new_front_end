@@ -9,7 +9,7 @@
       <% end %>
       <p>Serves: <%= recipe.servings %></p>
       <p><%= link_to "Instructions", recipe.source_url, target: "new" %>
-      <%= button_tag link_to("New Recipe", dashboard_path, method: :get)%>
+      <%= button_to "New Recipe", dashboard_path, method: :get %>
       <%= button_to "Add to Cupboard", list_path(recipe_id: recipe.id) %>
     </div>
   </div>
