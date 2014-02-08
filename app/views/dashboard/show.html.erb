@@ -6,6 +6,7 @@
     <div class="span-12">
       <%= render partial: 'side_nav' %>
       <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
+      <%= render partial: 'dashboard/list_partial', locals: { list: @list } %>
     </div>
   </div>
 </div>
