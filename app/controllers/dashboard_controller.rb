@@ -25,4 +25,8 @@ class DashboardController < ApplicationController
     list = list_talker.send(list_builder)
     redirect_to dashboard_path(list: list.body)
   end
+
+  def populate_cupboard
+    redirect_to dashboard_path
+  end
 end

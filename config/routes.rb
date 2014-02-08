@@ -5,6 +5,8 @@ FrontEnd::Application.routes.draw do
   get 'recipe' => 'dashboard#recipe'
   get 'login' => 'dashboard#login'
   post  'list' => 'dashboard#list'
+  post 'populate_cupboard' => 'dashboard#populate_cupboard'
+
   match 'hostess' => redirect('http://fridge-hostess.herokuapp.com/auth/facebook'),via: [:post, :get]
   get 'auth/hostess/callback' => 'dashboard#show'
 
