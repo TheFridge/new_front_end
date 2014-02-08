@@ -1,18 +1,16 @@
-<div class="container-fluid content-wrapper">
-  <div class='span6'>
-    <div class='hero-unit'>
-     <h1><%= recipe.name %></h1>
-     <%= image_tag recipe.image_url %>
-     <h2>Ingredients</h2>
-     <% recipe.ingredients.each do |ingredient| %>
-       <p><%= ingredient %></p>
-      <% end %>
-      <p>Serves: <%= recipe.servings %></p>
-      <p><%= link_to "Instructions", recipe.source_url, target: "new" %>
-      <%= button_to "New Recipe", dashboard_path, method: :get %>
-      <%= button_to "Add to Cupboard", list_path(recipe_id: recipe.id) %>
-    </div>
+<div class='span6'>
+  <div class='hero-unit'>
+   <h1><%= recipe.name %></h1>
+   <%= image_tag recipe.image_url %>
+   <h2>Ingredients</h2>
+   <% recipe.ingredients.each do |ingredient| %>
+     <p><%= ingredient %></p>
+    <% end %>
+    <p>Serves: <%= recipe.servings %></p>
+    <p><%= link_to "Instructions", recipe.source_url, target: "new" %>
+    <%= button_to "New Recipe", dashboard_path, method: :get %>
+    <%= button_to "Add to Cupboard", list_path(recipe_id: recipe.id) %>
   </div>
-
-  <%= render partial: "dashboard/list_partial", locals: {list: @list} if @list %>
 </div>
+
+ 
