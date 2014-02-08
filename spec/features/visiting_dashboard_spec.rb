@@ -7,9 +7,9 @@ describe 'visiting dashboard', type: :feature do
 
   it 'has links to cupboard and recipes', :vcr do
     visit dashboard_path
-    within('#nav') do
+    within('.sidebar-nav') do
       expect(page).to have_content('Cupboard')
-      expect(page).to have_content('Find Recipes')
+      expect(page).to have_content('Shopping List')
     end
   end
 
@@ -21,12 +21,20 @@ describe 'visiting dashboard', type: :feature do
     end
   end
 
-  it "when I click add to cupboard", :vcr do
+it "when I click add to cupboard", :vcr do
     visit dashboard_path
     click_on "Add to Cupboard"
-    within('#list') do
+    within('.list') do
       expect(page).to have_content(/[a-z]+/)
     end
+  end
+
+  it "when I click on Cupboard" do
+    visit dashboard_path
+    within('.sidebar-nav') do
+      click_on "Cupboard"
+    end
+    expect(page).to have_content("Your Cupboard")
   end
 
 end
