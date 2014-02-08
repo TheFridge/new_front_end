@@ -5,8 +5,10 @@
   <div class="row-fluid">
     <div class="span-12">
       <%= render partial: 'side_nav' %>
-      <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
-      <%= render partial: 'dashboard/list_partial', locals: { list: @list } %>
+      <div class="container-fluid content-wrapper">
+        <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
+        <%= render partial: "dashboard/list_partial", locals: {list: @list} if @list %>
+      </div>
     </div>
   </div>
 </div>
