@@ -5,7 +5,7 @@
       <% JSON.parse(list.body)["list_ingredients"].each do |ingredient| %>
         <p><%= ingredient["raw_name"] %></p>
       <% end %>
+      <%= button_to "I've got this shiz", populate_cupboard_path %>
     </div>
-    <%= button_to "I've got this shiz", populate_cupboard_path %>
   </div>
 </div>

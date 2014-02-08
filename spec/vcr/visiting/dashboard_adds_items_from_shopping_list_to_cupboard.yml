@@ -1,0 +1,360 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Sat, 08 Feb 2014 21:13:32 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1193'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":397,"image_url":"http://lh5.ggpht.com/RsMSphFLLL7POAyuhhg6tNdV45SNbndELxkyXKFNtk8q3-ioTs4jciTXHCpi8NIvFYyWVF3cHxaE0V6lZt1fbw=s360-c","ingredient_list":"butter/chicken
+        leg/yogurt/parsley/garlic cloves/lemon/salt/panko bread crumbs","name":"Crispy
+        Yogurt Chicken","seconds":4800,"servings":"6","source_url":"http://thepioneerwoman.com/cooking/2008/08/crispy-yogurt-chicken/","total_time":"1
+        hr 20 min","yummly_id":"Crispy-Yogurt-Chicken-The-Pioneer-Woman-41400"}},"ingredients":[{"ingredient":{"description":"2
+        cups plain, unflavored yogurt","id":3872,"recipe_id":397}},{"ingredient":{"description":"2
+        cloves (to 3 cloves) garlic","id":3873,"recipe_id":397}},{"ingredient":{"description":"parsley,
+        to taste","id":3874,"recipe_id":397}},{"ingredient":{"description":"1 whole
+        (juice of) lemon","id":3875,"recipe_id":397}},{"ingredient":{"description":"chicken
+        legs (or thighs, etc )","id":3876,"recipe_id":397}},{"ingredient":{"description":"salt
+        to taste","id":3877,"recipe_id":397}},{"ingredient":{"description":"2 cups
+        panko bread crumbs","id":3878,"recipe_id":397}},{"ingredient":{"description":"butter
+        (1 pat for each piece of chicken)","id":3879,"recipe_id":397}}]}'
+    http_version: 
+  recorded_at: Sat, 08 Feb 2014 21:13:33 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/397
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Sat, 08 Feb 2014 21:13:33 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1193'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":397,"image_url":"http://lh5.ggpht.com/RsMSphFLLL7POAyuhhg6tNdV45SNbndELxkyXKFNtk8q3-ioTs4jciTXHCpi8NIvFYyWVF3cHxaE0V6lZt1fbw=s360-c","ingredient_list":"butter/chicken
+        leg/yogurt/parsley/garlic cloves/lemon/salt/panko bread crumbs","name":"Crispy
+        Yogurt Chicken","seconds":4800,"servings":"6","source_url":"http://thepioneerwoman.com/cooking/2008/08/crispy-yogurt-chicken/","total_time":"1
+        hr 20 min","yummly_id":"Crispy-Yogurt-Chicken-The-Pioneer-Woman-41400"}},"ingredients":[{"ingredient":{"description":"2
+        cups plain, unflavored yogurt","id":3872,"recipe_id":397}},{"ingredient":{"description":"2
+        cloves (to 3 cloves) garlic","id":3873,"recipe_id":397}},{"ingredient":{"description":"parsley,
+        to taste","id":3874,"recipe_id":397}},{"ingredient":{"description":"1 whole
+        (juice of) lemon","id":3875,"recipe_id":397}},{"ingredient":{"description":"chicken
+        legs (or thighs, etc )","id":3876,"recipe_id":397}},{"ingredient":{"description":"salt
+        to taste","id":3877,"recipe_id":397}},{"ingredient":{"description":"2 cups
+        panko bread crumbs","id":3878,"recipe_id":397}},{"ingredient":{"description":"butter
+        (1 pat for each piece of chicken)","id":3879,"recipe_id":397}}]}'
+    http_version: 
+  recorded_at: Sat, 08 Feb 2014 21:13:34 GMT
+- request:
+    method: post
+    uri: http://list-makr.herokuapp.com/shopping-lists
+    body:
+      encoding: UTF-8
+      string: '{"user":{"user_id":1,"email":"joe@example.com"},"recipes":[{"name":"Crispy
+        Yogurt Chicken","source_url":"http://thepioneerwoman.com/cooking/2008/08/crispy-yogurt-chicken/","servings":"6","ingredients":["2
+        cups plain, unflavored yogurt","2 cloves (to 3 cloves) garlic","parsley, to
+        taste","1 whole (juice of) lemon","chicken legs (or thighs, etc )","salt to
+        taste","2 cups panko bread crumbs","butter (1 pat for each piece of chicken)"]}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 08 Feb 2014 21:13:35 GMT
+      Etag:
+      - '"c3ed7333d7ab409e3e2052edd680c759"'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      Set-Cookie:
+      - request_method=POST; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - fdae374b-826d-4346-b1f4-db872f1a9b82
+      X-Runtime:
+      - '0.301438'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '153'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 34,
+          "user_id": 1,
+          "created_at": "2014-02-08T21:13:35.391Z",
+          "updated_at": "2014-02-08T21:13:35.391Z",
+          "user_email": "joe@example.com"
+        }
+    http_version: 
+  recorded_at: Sat, 08 Feb 2014 21:13:36 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Sat, 08 Feb 2014 21:13:36 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1000'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":357,"image_url":"http://lh6.ggpht.com/KYRWBICErJkbZhpHDtxsimCDnumA1V9r7djLZAyA9w64h84oqmxqWZ9ssGTVAsrVZXJKp_A9TSacRUsmCNiCbKc=s360-c","ingredient_list":"flour
+        tortillas/buffalo-style chicken strips/Hidden Valley Ranch Dressing/red onion/sharp
+        cheddar cheese","name":"Buffalo Ranch Chicken Wrap","seconds":0,"servings":"4","source_url":"http://food52.com/recipes/7239-buffalo-ranch-chicken-wrap","total_time":null,"yummly_id":"Buffalo-ranch-chicken-wrap-321216"}},"ingredients":[{"ingredient":{"description":"4
+        pieces Tyson Buffalo Style Chicken Strips","id":3482,"recipe_id":357}},{"ingredient":{"description":"4
+        pieces Fresh Flour Tortillas","id":3483,"recipe_id":357}},{"ingredient":{"description":"1/2
+        Small Red Onion (Sliced very thin)","id":3484,"recipe_id":357}},{"ingredient":{"description":"2
+        cups Sharp Cheddar Cheese (Shredded)","id":3485,"recipe_id":357}},{"ingredient":{"description":"1/4
+        cup Hidden Valley Ranch Dressing (bottled)","id":3486,"recipe_id":357}}]}'
+    http_version: 
+  recorded_at: Sat, 08 Feb 2014 21:13:37 GMT
+- request:
+    method: get
+    uri: http://list-makr.herokuapp.com/shopping-lists/34
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 08 Feb 2014 21:13:37 GMT
+      Etag:
+      - '"abd6d04f4f530171a5ee7e4d16af1f9b"'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 02644f7d-65b7-4562-9bc6-7e8af413a371
+      X-Runtime:
+      - '0.025230'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '860'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 34,
+          "user_id": 1,
+          "created_at": "2014-02-08T21:13:35.391Z",
+          "updated_at": "2014-02-08T21:13:35.391Z",
+          "user_email": "joe@example.com",
+          "recipes": [
+            {
+              "id": 40,
+              "name": "Crispy Yogurt Chicken",
+              "source_url": "http://thepioneerwoman.com/cooking/2008/08/crispy-yogurt-chicken/",
+              "servings": "6"
+            }
+          ],
+          "list_ingredients": [
+            {
+              "raw_name": "2 cups plain, unflavored yogurt"
+            },
+            {
+              "raw_name": "2 cloves (to 3 cloves) garlic"
+            },
+            {
+              "raw_name": "parsley, to taste"
+            },
+            {
+              "raw_name": "1 whole (juice of) lemon"
+            },
+            {
+              "raw_name": "chicken legs (or thighs, etc )"
+            },
+            {
+              "raw_name": "salt to taste"
+            },
+            {
+              "raw_name": "2 cups panko bread crumbs"
+            },
+            {
+              "raw_name": "butter (1 pat for each piece of chicken)"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Sat, 08 Feb 2014 21:13:38 GMT
+- request:
+    method: get
+    uri: http://recipemama.herokuapp.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Sat, 08 Feb 2014 21:13:38 GMT
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '1589'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"recipe":{"recipe":{"id":381,"image_url":"http://lh3.ggpht.com/gXCo-T-YrmUctaddQaJCoRlhoPBWlRCvMQVApoclBrdQrwtUHLH8vyh1QhnohnYLaBV04fZxXtE1EJrt8DNOBw=s360-c","ingredient_list":"coarse
+        salt/garlic cloves/lemon/new potatoes/chicken/extra-virgin olive oil/balsamic
+        vinegar/red onion/ground pepper/thyme","name":"Baked Chicken with Onions,
+        Potatoes, Garlic, and Thyme","seconds":3600,"servings":"4","source_url":"http://www.marthastewart.com/313336/baked-chicken-with-onions-potatoes-garli","total_time":"1
+        Hr","yummly_id":"Baked-Chicken-with-Onions_-Potatoes_-Garlic_-and-Thyme-Martha-Stewart-191269"}},"ingredients":[{"ingredient":{"description":"1
+        whole chicken (3 to 3 1/2 pounds), cut into 8 pieces and breasts halved crosswise","id":3691,"recipe_id":381}},{"ingredient":{"description":"1
+        pound white new potatoes, halved (quartered if large)","id":3692,"recipe_id":381}},{"ingredient":{"description":"1
+        large red onion, cut into eighths","id":3693,"recipe_id":381}},{"ingredient":{"description":"1
+        head garlic, cloves separated and left unpeeled","id":3694,"recipe_id":381}},{"ingredient":{"description":"6
+        sprigs thyme","id":3695,"recipe_id":381}},{"ingredient":{"description":"1
+        lemon, quartered","id":3696,"recipe_id":381}},{"ingredient":{"description":"1/4
+        cup extra-virgin olive oil","id":3697,"recipe_id":381}},{"ingredient":{"description":"2
+        tablespoons balsamic vinegar","id":3698,"recipe_id":381}},{"ingredient":{"description":"coarse
+        salt and ground pepper","id":3699,"recipe_id":381}},{"ingredient":{"description":"coarse
+        salt and ground pepper","id":3700,"recipe_id":381}}]}'
+    http_version: 
+  recorded_at: Sat, 08 Feb 2014 21:13:39 GMT
+recorded_with: VCR 2.8.0
