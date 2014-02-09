@@ -24,9 +24,11 @@ class ListTalker
   end
 
   def find(id)
-    setup_connection.get do |req|
+    response = setup_connection.get do |req|
       req.url "/shopping-lists/#{id}"
       req.headers['Content-Type'] = 'application/json'
     end
+
+    JSON.parse(response.body)
   end
 end

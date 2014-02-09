@@ -28,12 +28,13 @@ class DashboardController < ApplicationController
   end
 
   def populate_cupboard
-    # if CupboardTalker.save_to_cupboard(params[:list])
-    #  flash[:notice] = 'Items have been added to your cupboard'
-    #  redirect_to cupboard_path
-    # else
-    #  flash[:notice] = 'There was an error, and your cupboard is empty'
-    #  redirect_to :back
-    # end
+    raise 'hell'
+    if CupboardTalker.save_to_cupboard(params[:list_id])
+     flash[:notice] = 'Items have been added to your cupboard'
+     redirect_to cupboard_path
+    else
+     flash[:notice] = 'There was an error, and your cupboard is empty'
+     redirect_to :back
+    end
   end
 end
