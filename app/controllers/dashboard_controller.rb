@@ -16,6 +16,7 @@ class DashboardController < ApplicationController
   end
 
   def cupboard
+    @cupboard = CupboardTalker.get_cupboard_for_user(current_user.id)
   end
 
   def list
