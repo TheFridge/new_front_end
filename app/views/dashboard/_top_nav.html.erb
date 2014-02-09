@@ -1,9 +1,9 @@
 <div class='navbar navbar-inverse navbar-static-top'>
   <div class='navbar-inner black-gradient'>
     <div class='container-fluid'>
-      <a class='brand'>
+      <%= link_to(dashboard_path, :class => 'brand') do %>
         <span class=rad>The</span> Fridge
-      </a>
+      <% end %>
 
       <div class='nav-collapse collapse'>
         <p class='navbar-text pull-right'>
