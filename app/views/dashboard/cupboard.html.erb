@@ -1,6 +1,12 @@
 <%= render partial: 'top_nav' %>
 <div class="row-fluid">
 </div>
+<% if flash.notice %>
+  <div class='alert alert-success'>
+    <%= flash.notice %>
+  </div>
+<% end %>
+
 <div class="container-fluid main-container">
   <div class="row-fluid">
     <div class="span-12">
