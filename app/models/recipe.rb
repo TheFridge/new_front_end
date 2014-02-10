@@ -12,7 +12,7 @@ class Recipe
     params['ingredients'].each do |ingredient|
       @ingredients << ingredient['ingredient']['description']
     end
-    @ingredient_list = params['ingredient list']
+    @ingredient_list = params['recipe']['recipe']['ingredient_list'].split('/')
   end
 
   def self.get_recipe
