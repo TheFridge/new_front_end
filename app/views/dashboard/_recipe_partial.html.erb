@@ -9,7 +9,7 @@
       <div class='span6'>
         <h1><%= recipe.name %></h1>
         <p>Serves: <%= recipe.servings %></p>
-        <p>Cook Time: unknown</p>
+        <p>Cook Time: <%= recipe.total_time %></p>
         <p><%= link_to "Instructions", recipe.source_url, target: "new" %></p>
         <%= button_to "New Recipe", dashboard_path, method: :get %>
         <%= button_to "Add to Shopping List", list_path(recipe_id: recipe.id) %>

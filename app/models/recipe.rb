@@ -1,6 +1,6 @@
 class Recipe
 
-  attr_reader :image_url, :name, :source_url, :servings, :ingredients, :id
+  attr_reader :image_url, :name, :source_url, :servings, :ingredients, :id, :ingredient_list, :total_time
 
   def initialize(params)
     @id = params['recipe']['recipe']['id']
@@ -13,6 +13,7 @@ class Recipe
       @ingredients << ingredient['ingredient']['description']
     end
     @ingredient_list = params['recipe']['recipe']['ingredient_list'].split('/')
+    @total_time = params['recipe']['recipe']['total_time']
   end
 
   def self.get_recipe
