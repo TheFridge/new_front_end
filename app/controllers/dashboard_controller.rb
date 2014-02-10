@@ -11,7 +11,8 @@ class DashboardController < ApplicationController
   end
 
   def logout
-    cookies.signed['email'] = nil
+    cookies.delete "email"
+    cookies.delete "user_id"
     redirect_to root_path
   end
 
