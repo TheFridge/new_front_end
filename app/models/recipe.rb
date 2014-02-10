@@ -12,6 +12,7 @@ class Recipe
     params['ingredients'].each do |ingredient|
       @ingredients << ingredient['ingredient']['description']
     end
+    @ingredient_list = params['ingredient list']
   end
 
   def self.get_recipe
