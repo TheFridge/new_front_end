@@ -4,6 +4,7 @@ FrontEnd::Application.routes.draw do
   get 'cupboard' => 'dashboard#cupboard'
   get 'recipe' => 'dashboard#recipe'
   get 'login' => 'dashboard#login'
+  get 'logout' => 'dashboard#logout'
   post  'list' => 'dashboard#list'
   post 'populate_cupboard' => 'dashboard#populate_cupboard'
 
