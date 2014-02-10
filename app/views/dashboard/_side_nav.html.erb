@@ -1,7 +1,16 @@
 <div class="sidebar-nav">
   <ul class="nav nav-stacked left-menu">
-    <li id="navigation-index">
+    <li>
+      <%= link_to "Recipes", recipe_path, { :class => "hidden-tablet hidden-phone" } %>
+    </li>
+    <li>
+      <%= link_to "Shopping List", cupboard_path, { :class => "hidden-tablet hidden-phone" } %>
+    </li>
+    <li>
       <%= link_to "Cupboard", cupboard_path, { :class => "hidden-tablet hidden-phone" } %>
+    </li>
+    <li>
+      <%= link_to "Favs <3", cupboard_path, { :class => "hidden-tablet hidden-phone" } %>
     </li>
   </ul>
 </div>

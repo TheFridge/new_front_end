@@ -1,4 +1,13 @@
-<div id="recipe">
-  <%= image_tag @recipe.image_url %>
-  <h2>Ingredients</h2>
+<%= render partial: 'top_nav' %>
+<div class="row-fluid">
+</div>
+<div class="container-fluid main-container">
+  <div class="row-fluid">
+    <div class="span-12">
+      <%= render partial: 'side_nav' %>
+      <div class="container-fluid content-wrapper">
+        <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
+      </div>
+    </div>
+  </div>
 </div>
