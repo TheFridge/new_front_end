@@ -11,8 +11,8 @@ class DashboardController < ApplicationController
   end
 
   def logout
-    cookies.delete "email"
-    cookies.delete "user_id"
+    cookies.delete "email", domain: "herokuapp.com"
+    cookies.delete "user_id", domain: "herokuapp.com"
     redirect_to root_path
   end
 
