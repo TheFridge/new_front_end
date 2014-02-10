@@ -5,7 +5,7 @@
       <% list["list_ingredients"].each do |ingredient| %>
         <p><%= ingredient["raw_name"] %></p>
       <% end %>
-      <%= button_to "I've got this shiz", populate_cupboard_path(list_id: list['id']) %>
+      <%= button_to "Put away grocieries", populate_cupboard_path(list_id: list['id']) %>
     </div>
   </div>
 </div>

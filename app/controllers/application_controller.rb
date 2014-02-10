@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    if Rails.env == 'development' || Rails.env == 'production'
+    if Rails.env == 'development' || Rails.env == 'test'
       User.first
     else
       User.find_or_create_by(:email => cookies.signed['email']) if cookies.signed['email']
