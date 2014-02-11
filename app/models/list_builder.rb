@@ -13,7 +13,7 @@ class ListBuilder
 
   def format_recipes
     recipes.map do |recipe|
-      {"name" => recipe.name, "source_url" => recipe.source_url, "servings" => recipe.servings, "ingredients" => recipe.ingredients}
+      {"name" => recipe.name, "source_url" => recipe.source_url, "servings" => recipe.servings, "ingredients" => recipe.ingredients, 'ingredient_list' => recipe.ingredient_list}
     end
   end
 
