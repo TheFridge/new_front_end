@@ -1,0 +1,26 @@
+<%= render partial: 'top_nav' %>
+<div class="row-fluid">
+</div>
+<div class="container-fluid main-container">
+  <div class="row-fluid">
+    <div class="span-12">
+      <%= render partial: 'side_nav' %>
+      <div class="container-fluid content-wrapper">
+        <div class="span-12">
+          <div class='hero-unit' style="min-height: 700px;">
+            <div class='row-fluid'>
+              <h1> My Favorite Recipes </h1>
+              <ul>
+                <% @recipes.each do |recipe| %>
+                  <li><h3><%= recipe["name"] %></h3>
+                    <%= button_to "Add to Shopping List", list_path(recipe_id: recipe['mamma_id']) %><%= link_to("See Recipe", recipe["source_url"]) %>
+                  </li>
+                <% end %>
+              <ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
