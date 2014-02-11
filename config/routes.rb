@@ -4,8 +4,10 @@ FrontEnd::Application.routes.draw do
   get 'cupboard' => 'dashboard#cupboard'
   get 'recipe' => 'dashboard#recipe'
   get 'login' => 'dashboard#login'
+  get 'shopping-list' => 'dashboard#shopping_list', as: 'shopping_list'
   post  'list' => 'dashboard#list'
   post 'populate_cupboard' => 'dashboard#populate_cupboard'
+  match 'destroy-list-item' => 'dashboard#destroy_list_item', as: 'destroy_list_item', via: [:delete]
 
   match 'hostess' => redirect('http://fridge-hostess.herokuapp.com/auth/facebook'),via: [:post, :get]
   get 'auth/hostess/callback' => 'dashboard#show'

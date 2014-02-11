@@ -12,7 +12,7 @@ class DashboardController < ApplicationController
 
   def show
     @recipe = Recipe.get_recipe
-    @list = ListTalker.new.find(params[:list_id]) if params[:list_id]
+    @list = ListTalker.new.find(session[:list_id]) if session[:list_id]
   end
 
   def cupboard
@@ -20,12 +20,23 @@ class DashboardController < ApplicationController
     @ingredients = @cupboard['ingredients']
   end
 
+  def shopping_list
+    @list = ListTalker.new.find(session[:list_id]) if session[:list_id]
+  end
+
+  def destroy_list_item
+    @list = ListTalker.new
+    @list.destroy_item(params[:id])
+    redirect_to shopping_list_path
+  end
+
   def list
     @recipe = Recipe.get_recipe_by_id(params[:recipe_id])
     list_builder = ListBuilder.new(current_user, @recipe).to_send
     list_talker = ListTalker.new
     list = JSON.parse(list_talker.send(list_builder).body)
-    redirect_to dashboard_path(list_id: list['id'])
+    session[:list_id] = list['shopping_list']['id']
+    redirect_to dashboard_path
   end
 
   def populate_cupboard
