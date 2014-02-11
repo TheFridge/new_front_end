@@ -4,6 +4,8 @@ class DashboardController < ApplicationController
 
   def recipe
     @recipe = Recipe.get_recipe
+    @recipes = ListTalker.new.get_recipes(current_user.id)
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def login
@@ -18,16 +20,20 @@ class DashboardController < ApplicationController
 
   def show
     @recipe = Recipe.get_recipe
+    @recipes = ListTalker.new.get_recipes(current_user.id)
     @list = ListTalker.new.find(current_user.id)
   end
 
   def cupboard
+    @list = ListTalker.new.find(current_user.id)
+    @recipes = ListTalker.new.get_recipes(current_user.id)
     @cupboard = CupboardTalker.get_cupboard_for_user(current_user.id)
     @ingredients = @cupboard['ingredients'].sort_by {|i| i['name']}.reverse
   end
 
   def shopping_list
     @list = ListTalker.new.find(current_user.id)
+    @recipes = ListTalker.new.get_recipes(current_user.id)
   end
 
   def clear_list
@@ -37,6 +43,7 @@ class DashboardController < ApplicationController
 
   def favorites
     @recipes = ListTalker.new.get_recipes(current_user.id)
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def destroy_list_item
@@ -82,5 +89,8 @@ class DashboardController < ApplicationController
   end
 
   def home
+    @recipes = ListTalker.new.get_recipes(current_user.id)
+    @list = ListTalker.new.find(current_user.id)
   end
+
 end
