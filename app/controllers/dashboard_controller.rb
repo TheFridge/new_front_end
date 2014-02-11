@@ -27,7 +27,7 @@ class DashboardController < ApplicationController
   end
 
   def shopping_list
-    @list = ListTalker.new.find(session[:list_id]) if session[:list_id]
+    @list = ListTalker.new.find(session[:list_id]) if session[:list_id] || []
   end
 
   def clear_list
@@ -38,6 +38,12 @@ class DashboardController < ApplicationController
   def destroy_list_item
     @list = ListTalker.new
     @list.destroy_item(params[:id])
+    redirect_to shopping_list_path
+  end
+
+  def email_list
+    ListTalker.new.email_list(current_user.id)
+    flash[:notice] = "Your list was sent to #{current_user.email}"
     redirect_to shopping_list_path
   end
 
