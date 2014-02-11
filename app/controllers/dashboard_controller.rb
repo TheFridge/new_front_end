@@ -18,7 +18,7 @@ class DashboardController < ApplicationController
 
   def show
     @recipe = Recipe.get_recipe
-    @list = ListTalker.new.find(session[:list_id]) if session[:list_id]
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def cupboard
@@ -27,7 +27,7 @@ class DashboardController < ApplicationController
   end
 
   def shopping_list
-    @list = ListTalker.new.find(session[:list_id]) if session[:list_id] || []
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def clear_list
