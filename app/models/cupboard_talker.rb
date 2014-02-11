@@ -30,6 +30,13 @@ class CupboardTalker
     JSON.parse(response.body)
   end
 
+  def self.empty_cupboard(user_id)
+    conn.post do |req|
+      req.url "/cupboards/drop_all_items"
+      req.params[:user_id] = user_id
+    end
+  end
+
   def self.drop_from_cupboard(cupboard_ingredient_id, user_id)
     conn.post do |req|
       req.url "/cupboards/drop_item"

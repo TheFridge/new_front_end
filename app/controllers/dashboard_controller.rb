@@ -70,6 +70,11 @@ class DashboardController < ApplicationController
     end
   end
 
+  def empty_cupboard
+    CupboardTalker.empty_cupboard(current_user.id)
+    redirect_to cupboard_path
+  end
+
   def drop_from_cupboard
     CupboardTalker.drop_from_cupboard(params[:id], current_user.id)
     redirect_to cupboard_path
