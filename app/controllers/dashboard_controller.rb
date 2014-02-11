@@ -42,4 +42,10 @@ class DashboardController < ApplicationController
     CupboardTalker.drop_from_cupboard(params[:id], current_user.id)
     redirect_to cupboard_path
   end
+
+  def update_quantity
+    CupboardTalker.update_ingredient_quantity(params[:id], params[:quantity], current_user.id)
+    flash[:notice] = "Your quantity has been updated"
+    redirect_to cupboard_path
+  end
 end
