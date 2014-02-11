@@ -10,6 +10,7 @@ FrontEnd::Application.routes.draw do
   get 'favorites' => 'dashboard#favorites', as: 'favorites'
   post  'list' => 'dashboard#list'
   post 'populate_cupboard' => 'dashboard#populate_cupboard'
+  post 'empty_cupboard' => 'dashboard#empty_cupboard'
   post 'email_list' => 'dashboard#email_list'
   post 'update_quantity/:id' => 'dashboard#update_quantity', as: 'update_quantity'
   match 'destroy-list-item' => 'dashboard#destroy_list_item', as: 'destroy_list_item', via: [:delete]
