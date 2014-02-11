@@ -87,8 +87,12 @@ class DashboardController < ApplicationController
   end
 
   def update_quantity
-    CupboardTalker.update_ingredient_quantity(params[:id], params[:quantity], current_user.id)
-    flash[:notice] = "Your quantity has been updated"
+    if params[:quantity].to_i < 0
+      flash[:notice] = "You can't have less than 0 of that."
+    else
+      CupboardTalker.update_ingredient_quantity(params[:id], params[:quantity], current_user.id)
+      flash[:notice] = "Your quantity has been updated"
+    end
     redirect_to cupboard_path
   end
 
