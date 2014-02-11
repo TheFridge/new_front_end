@@ -18,7 +18,7 @@ class DashboardController < ApplicationController
 
   def show
     @recipe = Recipe.get_recipe
-    @list = ListTalker.new.find(session[:list_id]) if session[:list_id]
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def cupboard
@@ -27,7 +27,7 @@ class DashboardController < ApplicationController
   end
 
   def shopping_list
-    @list = ListTalker.new.find(session[:list_id]) if session[:list_id] || []
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def clear_list
@@ -61,7 +61,7 @@ class DashboardController < ApplicationController
   end
 
   def populate_cupboard
-    if CupboardTalker.save_to_cupboard(params[:list_id], current_user.id)
+    if CupboardTalker.save_to_cupboard(session[:list_id], current_user.id)
      flash[:notice] = 'Items have been added to your cupboard'
      redirect_to cupboard_path
     else
