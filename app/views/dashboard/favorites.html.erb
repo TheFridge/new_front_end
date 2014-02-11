@@ -13,7 +13,7 @@
               <ul>
                 <% @recipes.each do |recipe| %>
                   <li><h3><%= recipe["name"] %></h3>
-                    <%= link_to("See Recipe", recipe["source_url"]) %>
+                    <%= button_to "Add to Shopping List", list_path(recipe_id: recipe['mamma_id']) %><%= link_to("See Recipe", recipe["source_url"]) %>
                   </li>
                 <% end %>
               <ul>
