@@ -17,7 +17,7 @@ class DashboardController < ApplicationController
 
   def cupboard
     @cupboard = CupboardTalker.get_cupboard_for_user(current_user.id)
-    @ingredients = @cupboard['ingredients']
+    @ingredients = @cupboard['ingredients'].sort_by {|i| i['name'] }
   end
 
   def list
