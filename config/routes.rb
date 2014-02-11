@@ -4,6 +4,7 @@ FrontEnd::Application.routes.draw do
   get 'cupboard' => 'dashboard#cupboard'
   get 'recipe' => 'dashboard#recipe'
   get 'login' => 'dashboard#login'
+  get 'home' => 'dashboard#home'
   get 'shopping-list' => 'dashboard#shopping_list', as: 'shopping_list'
   get 'logout' => 'dashboard#logout'
   get 'favorites' => 'dashboard#favorites', as: 'favorites'
@@ -16,7 +17,7 @@ FrontEnd::Application.routes.draw do
   delete 'drop_from_cupboard/:id' => 'dashboard#drop_from_cupboard', as: 'drop_from_cupboard'
 
   match 'hostess' => redirect('http://fridge-hostess.herokuapp.com/auth/facebook'),via: [:post, :get]
-  get 'auth/hostess/callback' => 'dashboard#show'
+  get 'auth/hostess/callback' => 'dashboard#home'
 
   root to: 'dashboard#show'
 
