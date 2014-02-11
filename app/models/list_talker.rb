@@ -47,4 +47,11 @@ class ListTalker
       req.params[:user_id] = id
     end
   end
+
+  def email_list(id)
+    setup_connection.post do |req|
+      req.url "/shopping-list/email-list"
+      req.params[:user_id] = id
+    end
+  end
 end

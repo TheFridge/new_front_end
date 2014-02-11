@@ -12,3 +12,13 @@
  *= require_self
  *= require_tree .
  */
+
+.shopping-list-buttons {
+  list-style-type: none;
+  text-align: right;
+}
+
+.shopping-list-buttons li {
+  display: inline-block;
+  padding-left: 20px
+}
