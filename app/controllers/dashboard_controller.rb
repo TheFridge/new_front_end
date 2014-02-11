@@ -85,4 +85,7 @@ class DashboardController < ApplicationController
     flash[:notice] = "Your quantity has been updated"
     redirect_to cupboard_path
   end
+
+  def home
+  end
 end
