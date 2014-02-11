@@ -10,6 +10,12 @@ class DashboardController < ApplicationController
     redirect_to dashboard_path if current_user
   end
 
+  def logout
+    cookies.delete "email", domain: "herokuapp.com"
+    cookies.delete "user_id", domain: "herokuapp.com"
+    redirect_to root_path
+  end
+
   def show
     @recipe = Recipe.get_recipe
     @list = ListTalker.new.find(session[:list_id]) if session[:list_id]
@@ -17,7 +23,7 @@ class DashboardController < ApplicationController
 
   def cupboard
     @cupboard = CupboardTalker.get_cupboard_for_user(current_user.id)
-    @ingredients = @cupboard['ingredients']
+    @ingredients = @cupboard['ingredients'].sort_by {|i| i['name']}.reverse
   end
 
   def shopping_list
@@ -47,5 +53,16 @@ class DashboardController < ApplicationController
      flash[:notice] = 'There was an error, and your cupboard is empty'
      redirect_to :back
     end
+  end
+
+  def drop_from_cupboard
+    CupboardTalker.drop_from_cupboard(params[:id], current_user.id)
+    redirect_to cupboard_path
+  end
+
+  def update_quantity
+    CupboardTalker.update_ingredient_quantity(params[:id], params[:quantity], current_user.id)
+    flash[:notice] = "Your quantity has been updated"
+    redirect_to cupboard_path
   end
 end
