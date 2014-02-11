@@ -35,6 +35,10 @@ class DashboardController < ApplicationController
     redirect_to shopping_list_path
   end
 
+  def favorites
+    @recipes = ListTalker.new.get_recipes(current_user.id)
+  end
+
   def destroy_list_item
     @list = ListTalker.new
     @list.destroy_item(params[:id])
