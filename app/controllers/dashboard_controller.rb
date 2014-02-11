@@ -70,6 +70,12 @@ class DashboardController < ApplicationController
     end
   end
 
+  def add_ingredient_to_cupboard
+    CupboardTalker.add_ingredient_to_cupboard(current_user.id, params)
+    flash[:notice] = "You've added #{params['ingredient']} to your cupboard!"
+    redirect_to cupboard_path
+  end
+
   def empty_cupboard
     CupboardTalker.empty_cupboard(current_user.id)
     redirect_to cupboard_path
