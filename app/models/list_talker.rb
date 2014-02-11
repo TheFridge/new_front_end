@@ -1,5 +1,6 @@
 class ListTalker
   attr_reader :conn
+  LIST_TOKEN = ENV['SUPER_SECRET_TOKEN']
   def new
   end
 
@@ -8,15 +9,22 @@ class ListTalker
   end
 
   def setup_connection
-    Faraday.new(:url => 'http://list-makr.herokuapp.com') do |faraday|
+    if Rails.env.development?
+      url = 'http://localhost:6666'
+    else
+      url = 'http://list-makr.herokuapp.com'
+    end
+    Faraday.new(:url => url) do |faraday|
       faraday.request  :url_encoded
+      faraday.token_auth(LIST_TOKEN)
  #     faraday.response :logger
       faraday.adapter  Faraday.default_adapter
     end
   end
 
   def post_list(built_list)
-    setup_connection.post do |req|
+    conn = setup_connection
+    conn.post do |req|
       req.url '/shopping-lists'
       req.headers['Content-Type'] = 'application/json'
       req.body = built_list

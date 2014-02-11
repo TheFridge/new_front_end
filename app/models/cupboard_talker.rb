@@ -1,8 +1,15 @@
 class CupboardTalker
+  CUPBOARD_TOKEN = ENV['SUPER_SECRET_TOKEN']
 
   #build faraday connection
   def self.conn
-    conn = Faraday.new(:url => 'http://list-makr.herokuapp.com') do |faraday|
+    if Rails.env.development?
+      url = 'http://localhost:6666'
+    else
+      url = 'http://list-makr.herokuapp.com'
+    end
+    conn = Faraday.new(:url => url) do |faraday|
+      faraday.token_auth(CUPBOARD_TOKEN)
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
