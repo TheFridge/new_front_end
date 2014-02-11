@@ -6,6 +6,7 @@ FrontEnd::Application.routes.draw do
   get 'login' => 'dashboard#login'
   get 'shopping-list' => 'dashboard#shopping_list', as: 'shopping_list'
   get 'logout' => 'dashboard#logout'
+  get 'favorites' => 'dashboard#favorites', as: 'favorites'
   post  'list' => 'dashboard#list'
   post 'populate_cupboard' => 'dashboard#populate_cupboard'
   post 'update_quantity/:id' => 'dashboard#update_quantity', as: 'update_quantity'

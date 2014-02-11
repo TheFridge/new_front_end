@@ -32,6 +32,14 @@ class ListTalker
     JSON.parse(response.body)
   end
 
+  def get_recipes(id)
+    response = setup_connection.get do |req|
+      req.url "/user-recipes/#{id}"
+      req.headers['Content-Type'] = 'application/json'
+    end
+    formatted_response = JSON.parse(response.body)
+  end
+
   def destroy_item(id)
     response = setup_connection.delete do |req|
       req.url "/list-ingredients/#{id}"
