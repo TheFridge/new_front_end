@@ -11,7 +11,7 @@ class CupboardTalker
 
   def self.save_to_cupboard(list_id, user_id)
     # get list based on id
-    list = conn.get {|req| req.url "/shopping-lists/#{list_id}"}.body
+    list = conn.get {|req| req.url "/shopping-lists/#{user_id}"}.body
 
     # Post items and quantities in list to cupboard using Faraday post request
     conn.post do |req|

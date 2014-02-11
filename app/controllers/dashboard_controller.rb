@@ -57,7 +57,7 @@ class DashboardController < ApplicationController
   end
 
   def populate_cupboard
-    if CupboardTalker.save_to_cupboard(params[:list_id], current_user.id)
+    if CupboardTalker.save_to_cupboard(session[:list_id], current_user.id)
      flash[:notice] = 'Items have been added to your cupboard'
      redirect_to cupboard_path
     else
