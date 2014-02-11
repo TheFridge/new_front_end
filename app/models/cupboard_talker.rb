@@ -37,4 +37,13 @@ class CupboardTalker
       req.params['user_id'] = user_id
     end
   end
+
+  def self.update_ingredient_quantity(cupboard_ingredient_id, quantity, user_id)
+    conn.post do |req|
+      req.url "/cupboards/update_quantity"
+      req.params['cupboard_ingredient_id'] = cupboard_ingredient_id
+      req.params['user_id'] = user_id
+      req.params['quantity'] = quantity
+    end
+  end
 end

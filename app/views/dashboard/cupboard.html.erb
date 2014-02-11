@@ -27,7 +27,7 @@
             <tbody>
               <% @ingredients.each do |ingredient| %>
                 <tr>
-                  <%= form_tag do %>
+                  <%= form_tag update_quantity_path(ingredient["cupboard_ingredient_id"]) do %>
                     <td><%= number_field_tag 'quantity', ingredient['quantity'], :style => 'width: 80%' %></td>
                   <td><%= ingredient['measurement'] %></td>
                   <td style="font-weight:bold"><%= ingredient['name'] %></td>
