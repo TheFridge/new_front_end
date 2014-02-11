@@ -40,4 +40,11 @@ class ListTalker
 
     JSON.parse(response.body)
   end
+
+  def empty_list(id)
+    setup_connection.post do |req|
+      req.url "/shopping-list/clear-list"
+      req.params[:user_id] = id
+    end
+  end
 end

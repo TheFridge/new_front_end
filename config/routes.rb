@@ -10,6 +10,7 @@ FrontEnd::Application.routes.draw do
   post 'populate_cupboard' => 'dashboard#populate_cupboard'
   post 'update_quantity/:id' => 'dashboard#update_quantity', as: 'update_quantity'
   match 'destroy-list-item' => 'dashboard#destroy_list_item', as: 'destroy_list_item', via: [:delete]
+  post 'clear_list' => 'dashboard#clear_list'
   delete 'drop_from_cupboard/:id' => 'dashboard#drop_from_cupboard', as: 'drop_from_cupboard'
 
   match 'hostess' => redirect('http://fridge-hostess.herokuapp.com/auth/facebook'),via: [:post, :get]

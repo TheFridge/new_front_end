@@ -20,17 +20,21 @@
                 <th>Quantity</th>
                 <th>Measurement</th>
                 <th>Ingredient</th>
-                <th></th>
+                <th style='text-align:center'>
+		              <%= link_to clear_list_path, :class => 'btn btn-small btn-danger', method: 'post' do %>
+		                Discard All
+		              <% end %>
+                </th>
               </tr>
             </thead>
             <tbody>
-	    <% if @list %>
+	    <% unless @list['error_message'] %>
               <% @list['ingredients'].each do |ingredient| %>
                 <tr>
                   <td><%= ingredient['quantity'] %></td>
                   <td><%= ingredient['measurement'] %></td>
                   <td><%= ingredient['name'] %></td>
-                  <td>
+                  <td style='text-align:center'>
 		    <%= link_to destroy_list_item_path(id:ingredient['list_ingredient_id']), :class => 'btn btn-small btn-danger', method: 'delete' do %>
 		      <i class='radmin-icon radmin-remove'></i>
 		      Discard
@@ -41,7 +45,7 @@
               <% end %>
 	    <% else %>
                 <tr>
-                  <td colspan="3">You have no items on your shopping list.
+                  <td colspan="4">You have no items in your shopping list.
                   </td>
               <% end %>
             </tbody>

@@ -30,6 +30,11 @@ class DashboardController < ApplicationController
     @list = ListTalker.new.find(session[:list_id]) if session[:list_id]
   end
 
+  def clear_list
+    ListTalker.new.empty_list(current_user.id)
+    redirect_to shopping_list_path
+  end
+
   def destroy_list_item
     @list = ListTalker.new
     @list.destroy_item(params[:id])
