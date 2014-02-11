@@ -34,10 +34,10 @@
                   <td><%= submit_tag 'Update', :class => 'btn btn-small btn-success' %></td>
                   <% end %>
                   <td>
-                    <a class='btn btn-small btn-danger'>
+                    <%= link_to drop_from_cupboard_path(ingredient['cupboard_ingredient_id']), :class => 'btn btn-small btn-danger', method: 'delete' do %>
                       <i class='radmin-icon radmin-remove'></i>
                       Discard
-                    </a>
+                    <% end %>
                   </td>
                 </tr>
               <% end %>

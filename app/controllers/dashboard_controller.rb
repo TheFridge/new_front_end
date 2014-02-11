@@ -17,7 +17,7 @@ class DashboardController < ApplicationController
 
   def cupboard
     @cupboard = CupboardTalker.get_cupboard_for_user(current_user.id)
-    @ingredients = @cupboard['ingredients'].sort_by {|i| i['name']}
+    @ingredients = @cupboard['ingredients'].sort_by {|i| i['name']}.reverse
   end
 
   def list
@@ -36,5 +36,10 @@ class DashboardController < ApplicationController
      flash[:notice] = 'There was an error, and your cupboard is empty'
      redirect_to :back
     end
+  end
+
+  def drop_from_cupboard
+    CupboardTalker.drop_from_cupboard(params[:id], current_user.id)
+    redirect_to cupboard_path
   end
 end
