@@ -10,6 +10,12 @@ class DashboardController < ApplicationController
     redirect_to dashboard_path if current_user
   end
 
+  def logout
+    cookies.delete "email", domain: "herokuapp.com"
+    cookies.delete "user_id", domain: "herokuapp.com"
+    redirect_to root_path
+  end
+
   def show
     @recipe = Recipe.get_recipe
     @list = ListTalker.new.find(params[:list_id]) if params[:list_id]
