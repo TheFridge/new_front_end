@@ -6,7 +6,7 @@ class CupboardTalker
     if Rails.env.development?
       url = 'http://localhost:6666'
     else
-      url = 'http://list-makr.herokuapp.com'
+      url = 'https://list-makr.herokuapp.com'
     end
     Faraday.new(:url => url) do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
