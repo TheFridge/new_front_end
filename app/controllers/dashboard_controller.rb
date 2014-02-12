@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
   skip_before_action :require_login, only: [:login]
 
   def recipe
+    #@recipe = current_user.random ? Recipe.get_recipe : Recipe.get_cupboard_recipe(current_user.id)
     @recipe = Recipe.get_recipe
   end
 
