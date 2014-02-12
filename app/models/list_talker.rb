@@ -12,8 +12,9 @@ class ListTalker
     if Rails.env.development?
       url = 'http://localhost:6666'
     else
-      url = 'http://list-makr.herokuapp.com'
+      url = 'https://list-makr.herokuapp.com'
     end
+
     Faraday.new(:url => url) do |faraday|
       faraday.request  :url_encoded
       faraday.token_auth(LIST_TOKEN)
@@ -45,7 +46,7 @@ class ListTalker
       req.url "/user-recipes/#{id}"
       req.headers['Content-Type'] = 'application/json'
     end
-    formatted_response = JSON.parse(response.body)
+    JSON.parse(response.body)
   end
 
   def destroy_item(id)
