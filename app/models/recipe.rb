@@ -13,7 +13,7 @@ class Recipe
     params['ingredients'].each do |ingredient|
       @ingredients << ingredient['ingredient']['description']
     end
-    @ingredient_list = params['recipe']['recipe']['ingredient_list']#.split('/')
+    @ingredient_list = if params['recipe']['recipe']['ingredient_list'] then params['recipe']['recipe']['ingredient_list'].split('/') end
     @total_time = params['recipe']['recipe']['total_time']
   end
 
