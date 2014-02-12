@@ -31,9 +31,9 @@ class Recipe
 
     @cupboard = CupboardTalker.get_cupboard_for_user(user_id)
 
-    ingredients = @cupboard['ingredients'].collect {|i| i['name']}
+    ingredients = {'ingredients' => @cupboard['ingredients'].collect {|i| i['name']}}
 
-     response = conn.post do |req|
+    response = conn.post do |req|
       req.url "/by_ingredient"
       req.headers['Content-Type'] = 'application/json'
       req.body = ingredients.to_json
