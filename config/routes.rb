@@ -8,8 +8,11 @@ FrontEnd::Application.routes.draw do
   get 'shopping-list' => 'dashboard#shopping_list', as: 'shopping_list'
   get 'logout' => 'dashboard#logout'
   get 'favorites' => 'dashboard#favorites', as: 'favorites'
+  post 'toggle_random' => 'dashboard#toggle_random'
   post  'list' => 'dashboard#list'
   post 'populate_cupboard' => 'dashboard#populate_cupboard'
+  post 'empty_cupboard' => 'dashboard#empty_cupboard'
+  post 'add_ingredient_to_cupboard' => 'dashboard#add_ingredient_to_cupboard'
   post 'email_list' => 'dashboard#email_list'
   post 'update_quantity/:id' => 'dashboard#update_quantity', as: 'update_quantity'
   match 'destroy-list-item' => 'dashboard#destroy_list_item', as: 'destroy_list_item', via: [:delete]
