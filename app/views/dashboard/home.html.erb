@@ -1,0 +1,30 @@
+<%= render partial: 'top_nav' %>
+<div class="row-fluid">
+</div>
+<% if flash.notice %>
+  <div class='alert alert-success'>
+    <%= flash.notice %>
+  </div>
+<% end %>
+
+<div class="container-fluid main-container">
+  <div class="row-fluid">
+    <div class="span-12">
+      <%= render partial: 'side_nav' %> 
+      <div class="container-fluid content-wrapper">
+
+      <div class='login-radmin align-center'>
+        <br>
+        <h1 class='brand'><span class='rad'>The</span> Fridge</h1>
+        <h3 class='brand'><span class='rad'>How It Works</span></h3>
+        <br>
+      </div>
+
+        <div class='align-center'>
+        <%= image_tag 'openingsequence.png' %>     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

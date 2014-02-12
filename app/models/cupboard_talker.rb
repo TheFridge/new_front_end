@@ -18,7 +18,7 @@ class CupboardTalker
 
   def self.save_to_cupboard(list_id, user_id)
     # get list based on id
-    list = conn.get {|req| req.url "/shopping-lists/#{list_id}"}.body
+    list = conn.get {|req| req.url "/shopping-lists/#{user_id}"}.body
 
     # Post items and quantities in list to cupboard using Faraday post request
     conn.post do |req|
@@ -35,5 +35,22 @@ class CupboardTalker
     end
 
     JSON.parse(response.body)
+  end
+
+  def self.drop_from_cupboard(cupboard_ingredient_id, user_id)
+    conn.post do |req|
+      req.url "/cupboards/drop_item"
+      req.params['cupboard_ingredient_id'] = cupboard_ingredient_id
+      req.params['user_id'] = user_id
+    end
+  end
+
+  def self.update_ingredient_quantity(cupboard_ingredient_id, quantity, user_id)
+    conn.post do |req|
+      req.url "/cupboards/update_quantity"
+      req.params['cupboard_ingredient_id'] = cupboard_ingredient_id
+      req.params['user_id'] = user_id
+      req.params['quantity'] = quantity
+    end
   end
 end

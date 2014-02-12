@@ -12,7 +12,26 @@
     <div class="span-12">
       <%= render partial: 'side_nav' %>
       <div class="container-fluid content-wrapper">
-        <h1>Your Shopping List</h1>
+        <div class='row-fluid'>
+          <div class='span6'>
+            <h1>Your Shopping List</h1>
+          </div>
+          <div class='span6'>
+            <ul class='shopping-list-buttons'>
+              <li>
+              <%= link_to email_list_path, :class => 'btn btn-large btn-primary pull-right', method: 'post' do %>
+                <i class='radmin-icon radmin-mail'></i>
+              <% end %>
+              </li>
+
+              <li>
+              <%= link_to populate_cupboard_path, :class => 'btn btn-large btn-success pull-right', method: 'post' do %>
+                Put Away Groceries
+              <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
           <div class='squiggly-border'></div>
           <table class='table table-striped table-bordered table-radmin'>
             <thead>
@@ -20,17 +39,21 @@
                 <th>Quantity</th>
                 <th>Measurement</th>
                 <th>Ingredient</th>
-                <th></th>
+                <th style='text-align:center'>
+		              <%= link_to clear_list_path, :class => 'btn btn-small btn-danger', method: 'post' do %>
+		                Discard All
+		              <% end %>
+                </th>
               </tr>
             </thead>
             <tbody>
-	    <% if @list %>
+	    <% unless @list['error_message'] %>
               <% @list['ingredients'].each do |ingredient| %>
                 <tr>
                   <td><%= ingredient['quantity'] %></td>
                   <td><%= ingredient['measurement'] %></td>
                   <td><%= ingredient['name'] %></td>
-                  <td>
+                  <td style='text-align:center'>
 		    <%= link_to destroy_list_item_path(id:ingredient['list_ingredient_id']), :class => 'btn btn-small btn-danger', method: 'delete' do %>
 		      <i class='radmin-icon radmin-remove'></i>
 		      Discard
@@ -41,7 +64,7 @@
               <% end %>
 	    <% else %>
                 <tr>
-                  <td colspan="3">You have no items on your shopping list.
+                  <td colspan="4">You have no items in your shopping list.
                   </td>
               <% end %>
             </tbody>
