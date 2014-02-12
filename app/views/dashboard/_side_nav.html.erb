@@ -1,15 +1,15 @@
 <div class="sidebar-nav">
   <ul class="nav nav-stacked left-menu">
-    <li>
+    <li class="<%= active_tab['recipe']%>">
       <%= link_to "Recipes", recipe_path, { :class => "hidden-tablet hidden-phone" } %>
     </li>
-    <li>
+    <li class="<%= active_tab['shopping_list']%>">
       <%= link_to "Shopping List", shopping_list_path, { :class => "hidden-tablet hidden-phone" } %>
     </li>
-    <li>
+    <li class="<%= active_tab['cupboard']%>">
       <%= link_to "Cupboard", cupboard_path, { :class => "hidden-tablet hidden-phone" } %>
     </li>
-    <li>
+    <li class="<%= active_tab['favorites']%>">
       <%= link_to "Favorite Recipes", favorites_path, { :class => "hidden-tablet hidden-phone" } %>
     </li>
   </ul>
