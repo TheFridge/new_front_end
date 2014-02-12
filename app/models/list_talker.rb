@@ -12,7 +12,7 @@ class ListTalker
     if Rails.env.development?
       url = 'http://localhost:6666'
     else
-      url = 'http://salty-scrubland-3582.herokuapp.com'
+      url = 'http://list-makr.herokuapp.com'
     end
     Faraday.new(:url => url) do |faraday|
       faraday.request  :url_encoded
