@@ -30,18 +30,30 @@ class Recipe
     conn = Faraday.new("http://recipemama.herokuapp.com")
 
     @cupboard = CupboardTalker.get_cupboard_for_user(user_id)
-
-    ingredients = {'ingredients' => @cupboard['ingredients'].collect {|i| i['name']}}
-
+    
+    if @cupboard['ingredients'].any? 
+      ingredients = {'ingredients' => @cupboard['ingredients'].collect {|i| i['name']}}
+    else
+      ingredients = {'ingredients' => ['']}
+    end
+    
     response = conn.post do |req|
       req.url "/by_ingredient"
       req.headers['Content-Type'] = 'application/json'
       req.body = ingredients.to_json
     end
+    
+    recipe = JSON.parse(response.body)
+    formatted_recipe = format_recipe_response(recipe)
+    new(formatted_recipe)
+  end
+  
+  def self.format_recipe_response(recipe)
+    mapped_ingredients = recipe['ingredients'].map do |ingredient|
+      {'ingredient' => ingredient}
+    end
 
-    #raise response
-
-    new(JSON.parse(response.body))
+    {'recipe' => {'recipe' => recipe['recipe']}, 'ingredients' => mapped_ingredients}
   end
 
 end
