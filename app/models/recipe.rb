@@ -3,6 +3,7 @@ class Recipe
   attr_reader :image_url, :name, :source_url, :servings, :ingredients, :id, :ingredient_list, :total_time
 
   def initialize(params)
+    #puts params
     @id = params['recipe']['recipe']['id']
     @image_url = params['recipe']['recipe']['image_url']
     @name = params['recipe']['recipe']['name']
@@ -12,7 +13,7 @@ class Recipe
     params['ingredients'].each do |ingredient|
       @ingredients << ingredient['ingredient']['description']
     end
-    @ingredient_list = params['recipe']['recipe']['ingredient_list'].split('/')
+    @ingredient_list = params['recipe']['recipe']['ingredient_list']#.split('/')
     @total_time = params['recipe']['recipe']['total_time']
   end
 
@@ -45,7 +46,11 @@ class Recipe
     
     recipe = JSON.parse(response.body)
     formatted_recipe = format_recipe_response(recipe)
-    new(formatted_recipe)
+    if recipe['recipe']['recipe']['id']
+      new(recipe)
+    else
+      new(formatted_recipe)
+    end
   end
   
   def self.format_recipe_response(recipe)
