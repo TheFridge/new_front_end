@@ -98,4 +98,16 @@ class DashboardController < ApplicationController
 
   def home
   end
+
+  def toggle_random
+    user = User.find(current_user.id)
+    if user.random
+      user.random = false
+      user.save
+    else
+      user.random = true
+      user.save
+    end
+    redirect_to recipe_path
+  end
 end

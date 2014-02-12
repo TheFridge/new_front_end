@@ -8,6 +8,7 @@ FrontEnd::Application.routes.draw do
   get 'shopping-list' => 'dashboard#shopping_list', as: 'shopping_list'
   get 'logout' => 'dashboard#logout'
   get 'favorites' => 'dashboard#favorites', as: 'favorites'
+  post 'toggle_random' => 'dashboard#toggle_random'
   post  'list' => 'dashboard#list'
   post 'populate_cupboard' => 'dashboard#populate_cupboard'
   post 'empty_cupboard' => 'dashboard#empty_cupboard'

@@ -13,6 +13,7 @@
         <p><%= link_to "Instructions", recipe.source_url, target: "new" %></p>
         <%= button_to "Next Recipe", dashboard_path, method: :get %>
         <%= button_to "Add to Shopping List", list_path(recipe_id: recipe.id) %>
+        <%= render partial: 'dashboard/random_toggle' %>
       </div>
     </div>
 
