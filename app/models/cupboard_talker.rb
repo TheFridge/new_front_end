@@ -6,7 +6,7 @@ class CupboardTalker
     if Rails.env.development?
       url = 'http://localhost:6666'
     else
-      url = 'http://list-makr.herokuapp.com'
+      url = 'http://salty-scrubland-3582.herokuapp.com'
     end
     conn = Faraday.new(:url => url) do |faraday|
       faraday.token_auth(CUPBOARD_TOKEN)
