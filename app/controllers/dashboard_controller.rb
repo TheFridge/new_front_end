@@ -3,7 +3,10 @@ class DashboardController < ApplicationController
   skip_before_action :require_login, only: [:login]
 
   def recipe
+    #@recipe = current_user.random ? Recipe.get_recipe : Recipe.get_cupboard_recipe(current_user.id)
     @recipe = Recipe.get_recipe
+    @recipes = ListTalker.new.get_recipes(current_user.id)
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def login
@@ -18,16 +21,20 @@ class DashboardController < ApplicationController
 
   def show
     @recipe = Recipe.get_recipe
+    @recipes = ListTalker.new.get_recipes(current_user.id)
     @list = ListTalker.new.find(current_user.id)
   end
 
   def cupboard
+    @list = ListTalker.new.find(current_user.id)
+    @recipes = ListTalker.new.get_recipes(current_user.id)
     @cupboard = CupboardTalker.get_cupboard_for_user(current_user.id)
     @ingredients = @cupboard['ingredients'].sort_by {|i| i['name']}.reverse
   end
 
   def shopping_list
     @list = ListTalker.new.find(current_user.id)
+    @recipes = ListTalker.new.get_recipes(current_user.id)
   end
 
   def clear_list
@@ -37,6 +44,7 @@ class DashboardController < ApplicationController
 
   def favorites
     @recipes = ListTalker.new.get_recipes(current_user.id)
+    @list = ListTalker.new.find(current_user.id)
   end
 
   def destroy_list_item
@@ -70,17 +78,46 @@ class DashboardController < ApplicationController
     end
   end
 
+  def add_ingredient_to_cupboard
+    CupboardTalker.add_ingredient_to_cupboard(current_user.id, params)
+    flash[:notice] = "You've added #{params['ingredient']} to your cupboard!"
+    redirect_to cupboard_path
+  end
+
+  def empty_cupboard
+    CupboardTalker.empty_cupboard(current_user.id)
+    redirect_to cupboard_path
+  end
+
   def drop_from_cupboard
     CupboardTalker.drop_from_cupboard(params[:id], current_user.id)
     redirect_to cupboard_path
   end
 
   def update_quantity
-    CupboardTalker.update_ingredient_quantity(params[:id], params[:quantity], current_user.id)
-    flash[:notice] = "Your quantity has been updated"
+    if params[:quantity].to_i < 0
+      flash[:notice] = "You can't have less than 0 of that."
+    else
+      CupboardTalker.update_ingredient_quantity(params[:id], params[:quantity], current_user.id)
+      flash[:notice] = "Your quantity has been updated"
+    end
     redirect_to cupboard_path
   end
 
   def home
+    @recipes = ListTalker.new.get_recipes(current_user.id)
+    @list = ListTalker.new.find(current_user.id)
+  end
+
+  def toggle_random
+    user = User.find(current_user.id)
+    if user.random
+      user.random = false
+      user.save
+    else
+      user.random = true
+      user.save
+    end
+    redirect_to recipe_path
   end
 end

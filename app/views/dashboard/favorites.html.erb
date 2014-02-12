@@ -4,7 +4,7 @@
 <div class="container-fluid main-container">
   <div class="row-fluid">
     <div class="span-12">
-      <%= render partial: 'side_nav' %>
+      <%= render partial: 'side_nav', locals: { list: @list, recipes: @recipes} %>
       <div class="container-fluid content-wrapper">
         <div class="span-12">
           <div class='hero-unit' style="min-height: 700px;">
@@ -13,7 +13,8 @@
               <ul>
                 <% @recipes.each do |recipe| %>
                   <li><h3><%= recipe["name"] %></h3>
-                    <%= button_to "Add to Shopping List", list_path(recipe_id: recipe['mamma_id']) %><%= link_to("See Recipe", recipe["source_url"]) %>
+                  <%= button_to "Add to Shopping List", list_path(recipe_id: recipe['mamma_id']) %>
+                  <%= link_to("See Recipe", recipe["source_url"], target: 'new') %>
                   </li>
                 <% end %>
               <ul>

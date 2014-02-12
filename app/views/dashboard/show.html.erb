@@ -4,7 +4,7 @@
 <div class="container-fluid main-container">
   <div class="row-fluid">
     <div class="span-12">
-      <%= render partial: 'side_nav' %>
+            <%= render partial: 'side_nav', locals: { list: @list, recipes: @recipes} %>
       <div class="container-fluid content-wrapper">
         <%= render partial: "dashboard/recipe_partial", locals: { recipe: @recipe } %>
       </div>

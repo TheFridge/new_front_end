@@ -10,7 +10,7 @@
 <div class="container-fluid main-container">
   <div class="row-fluid">
     <div class="span-12">
-      <%= render partial: 'side_nav' %>
+      <%= render partial: 'side_nav', locals: { list: @list, recipes: @recipes} %>
       <div class="container-fluid content-wrapper">
         <h1>Your Cupboard</h1>
           <div class='squiggly-border'></div>
@@ -20,20 +20,31 @@
                 <th>Quantity</th>
                 <th>Measurement</th>
                 <th>Ingredient</th>
-                <th></th>
-                <th></th>
+                <th colspan='2' style='text-align:center; width: 200px'>
+                  <%= link_to empty_cupboard_path, :class => 'btn btn-small btn-danger', style: 'width: 170px', method: 'post' do %>
+                    Discard All
+                  <% end %>
+                </th>
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <%= form_tag add_ingredient_to_cupboard_path do %>
+                  <td><%= number_field_tag 'quantity', nil, :style => 'width: 80%' %></td>
+                  <td><%= text_field_tag 'measurement', nil, :style => 'width: 60%'  %></td>
+                  <td><%= text_field_tag 'ingredient' %></td>
+                  <td colspan='2' style='text-align:center'><%= submit_tag 'Add Ingredient', style: 'width: 190px', :class => 'btn btn-small btn-primary' %></td>
+                <% end %>
+              </tr>
               <% @ingredients.each do |ingredient| %>
                 <tr>
                   <%= form_tag update_quantity_path(ingredient["cupboard_ingredient_id"]) do %>
-                    <td><%= number_field_tag 'quantity', ingredient['quantity'], :style => 'width: 80%' %></td>
+                  <td><%= number_field_tag 'quantity', ingredient['quantity'], :style => 'width: 80%' %></td>
                   <td><%= ingredient['measurement'] %></td>
                   <td style="font-weight:bold"><%= ingredient['name'] %></td>
-                  <td><%= submit_tag 'Update', :class => 'btn btn-small btn-success' %></td>
+                  <td style='text-align:center'><%= submit_tag 'Update', :class => 'btn btn-small btn-success' %></td>
                   <% end %>
-                  <td>
+                  <td style='text-align:center'>
                     <%= link_to drop_from_cupboard_path(ingredient['cupboard_ingredient_id']), :class => 'btn btn-small btn-danger', method: 'delete' do %>
                       <i class='radmin-icon radmin-remove'></i>
                       Discard
@@ -43,7 +54,6 @@
               <% end %>
             </tbody>
           </table>
-        </div>
       </div>
     </div>
   </div>

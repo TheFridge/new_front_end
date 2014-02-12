@@ -10,7 +10,7 @@
 <div class="container-fluid main-container">
   <div class="row-fluid">
     <div class="span-12">
-      <%= render partial: 'side_nav' %>
+      <%= render partial: 'side_nav', locals: { list: @list, recipes: @recipes} %>
       <div class="container-fluid content-wrapper">
         <div class='row-fluid'>
           <div class='span6'>
@@ -69,7 +69,6 @@
               <% end %>
             </tbody>
           </table>
-        </div>
       </div>
     </div>
   </div>

@@ -1,16 +1,31 @@
 <div class="sidebar-nav">
   <ul class="nav nav-stacked left-menu">
-    <li>
+    <li class="<%= active_tab['recipe']%>">
       <%= link_to "Recipes", recipe_path, { :class => "hidden-tablet hidden-phone" } %>
     </li>
-    <li>
-      <%= link_to "Shopping List", shopping_list_path, { :class => "hidden-tablet hidden-phone" } %>
+    <li class="<%= active_tab['shopping_list']%>">
+      <%= link_to shopping_list_path, { :class => "hidden-tablet hidden-phone" } do %>
+        <div>Shopping List
+        <% unless list['ingredients'].nil? %>
+          <span class="label pull-right hidden-tablet hidden-phone">
+            <%= list['ingredients'].count%>
+          </span>
+        <% end %>
+        </div>
+        <% end %>
     </li>
-    <li>
+    <li class="<%= active_tab['cupboard']%>">
       <%= link_to "Cupboard", cupboard_path, { :class => "hidden-tablet hidden-phone" } %>
     </li>
-    <li>
-      <%= link_to "Favorite Recipes", favorites_path, { :class => "hidden-tablet hidden-phone" } %>
+    <li class="<%= active_tab['favorites']%>">
+      <%= link_to favorites_path, { :class => "hidden-tablet hidden-phone" } do %>
+        <div>Favorite Recipes
+        <% if recipes.count > 0 %>
+          <span class="label pull-right hidden-tablet hidden-phone"><%= recipes.count %></span>
+        <% end %>
+      </div>
+    <% end %>
+
     </li>
   </ul>
 </div>
