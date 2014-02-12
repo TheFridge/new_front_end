@@ -3,7 +3,6 @@ class Recipe
   attr_reader :image_url, :name, :source_url, :servings, :ingredients, :id, :ingredient_list, :total_time
 
   def initialize(params)
-    #puts params
     @id = params['recipe']['recipe']['id']
     @image_url = params['recipe']['recipe']['image_url']
     @name = params['recipe']['recipe']['name']
@@ -29,6 +28,7 @@ class Recipe
 
   def self.get_cupboard_recipe(user_id)
     conn = Faraday.new("http://recipemama.herokuapp.com")
+    #conn = Faraday.new("http://localhost:4567")
 
     @cupboard = CupboardTalker.get_cupboard_for_user(user_id)
     
@@ -46,7 +46,7 @@ class Recipe
     
     recipe = JSON.parse(response.body)
     formatted_recipe = format_recipe_response(recipe)
-    if recipe['recipe']['recipe']['id']
+    if recipe['recipe'].keys.include?('recipe')
       new(recipe)
     else
       new(formatted_recipe)
