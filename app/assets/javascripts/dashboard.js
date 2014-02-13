@@ -4,6 +4,7 @@ $(function(){
     var table_row = $(this).parents('tr');
     table_row.fadeToggle('slow');
     removeIngredient(this);
+    updateCount();
     return false;
   });
 
@@ -11,6 +12,7 @@ $(function(){
     var table_row = $(this).parents('tr');
     table_row.fadeToggle('slow');
     removeIngredient(this);
+    updateCount();
     return false;
   });
 
@@ -19,6 +21,12 @@ $(function(){
       type: 'DELETE',
       url: $(element).attr('href')
     });
+  }
+
+  function updateCount(){
+    var count = $('.list-count').text();
+    count = count - 1;
+    $('.list-count').text(count);
   }
 
 });

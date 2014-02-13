@@ -7,7 +7,7 @@
       <%= link_to shopping_list_path, { :class => "hidden-tablet hidden-phone" } do %>
         <div>Shopping List
         <% unless list['ingredients'].nil? %>
-          <span class="label pull-right hidden-tablet hidden-phone">
+          <span class="label pull-right hidden-tablet hidden-phone list-count">
             <%= list['ingredients'].count%>
           </span>
         <% end %>
