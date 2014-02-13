@@ -120,4 +120,8 @@ class DashboardController < ApplicationController
     end
     redirect_to recipe_path
   end
+
+  def ping
+    render text: "PONG\n"
+  end
 end

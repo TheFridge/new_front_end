@@ -24,4 +24,6 @@ FrontEnd::Application.routes.draw do
 
   root to: 'dashboard#show'
 
+  get 'ping' => 'dashboard#ping'
+
 end
