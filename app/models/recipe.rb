@@ -12,7 +12,7 @@ class Recipe
     params['ingredients'].each do |ingredient|
       @ingredients << ingredient['ingredient']['description']
     end
-    @ingredient_list = params['recipe']['recipe']['ingredient_list'].split('/')
+    @ingredient_list = if params['recipe']['recipe']['ingredient_list'] then params['recipe']['recipe']['ingredient_list'].split('/') end
     @total_time = params['recipe']['recipe']['total_time']
   end
 
@@ -28,10 +28,15 @@ class Recipe
 
   def self.get_cupboard_recipe(user_id)
     conn = Faraday.new("http://recipemama.herokuapp.com")
+    #conn = Faraday.new("http://localhost:4567")
 
     @cupboard = CupboardTalker.get_cupboard_for_user(user_id)
 
-    ingredients = {'ingredients' => @cupboard['ingredients'].collect {|i| i['name']}}
+    if @cupboard['ingredients'].any?
+      ingredients = {'ingredients' => @cupboard['ingredients'].collect {|i| i['name']}}
+    else
+      ingredients = {'ingredients' => ['']}
+    end
 
     response = conn.post do |req|
       req.url "/by_ingredient"
@@ -39,7 +44,21 @@ class Recipe
       req.body = ingredients.to_json
     end
 
-    new(JSON.parse(response.body))
+    recipe = JSON.parse(response.body)
+    formatted_recipe = format_recipe_response(recipe)
+    if recipe['recipe'].keys.include?('recipe')
+      new(recipe)
+    else
+      new(formatted_recipe)
+    end
+  end
+
+  def self.format_recipe_response(recipe)
+    mapped_ingredients = recipe['ingredients'].map do |ingredient|
+      {'ingredient' => ingredient}
+    end
+
+    {'recipe' => {'recipe' => recipe['recipe']}, 'ingredients' => mapped_ingredients}
   end
 
 end

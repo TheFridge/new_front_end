@@ -33,7 +33,7 @@
                   <td><%= number_field_tag 'quantity', nil, :style => 'width: 80%' %></td>
                   <td><%= text_field_tag 'measurement', nil, :style => 'width: 60%'  %></td>
                   <td><%= text_field_tag 'ingredient' %></td>
-                  <td colspan='2' style='text-align:center'><%= submit_tag 'Add Ingredient', style: 'width: 190px', :class => 'btn btn-small btn-primary' %></td>
+                  <td colspan='2' style='text-align:center' class='cupobard-remove'><%= submit_tag 'Add Ingredient', style: 'width: 190px', :class => 'btn btn-small btn-primary' %></td>
                 <% end %>
               </tr>
               <% @ingredients.each do |ingredient| %>
