@@ -54,7 +54,7 @@
                   <td><%= ingredient['measurement'] %></td>
                   <td><%= ingredient['name'] %></td>
                   <td style='text-align:center'>
-		    <%= link_to destroy_list_item_path(id:ingredient['list_ingredient_id']), :class => 'btn btn-small btn-danger', method: 'delete' do %>
+		    <%= link_to destroy_list_item_path(id:ingredient['list_ingredient_id']), :class => 'btn btn-small btn-danger shopping-list-remove', method: 'delete' do %>
 		      <i class='radmin-icon radmin-remove'></i>
 		      Discard
 		    <% end %>
