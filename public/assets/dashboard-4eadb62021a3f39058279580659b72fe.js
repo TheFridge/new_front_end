@@ -1,0 +1,1 @@
+$(function(){function t(t){$.ajax({type:"DELETE",url:$(t).attr("href")})}function n(){var t=$(".list-count").text();t-=1,$(".list-count").text(t)}$(".cupboard-remove").click(function(){var r=$(this).parents("tr");return r.fadeToggle("slow"),t(this),n(),!1}),$(".shopping-list-remove").click(function(){var r=$(this).parents("tr");return r.fadeToggle("slow"),t(this),n(),!1})});
