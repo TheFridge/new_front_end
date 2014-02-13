@@ -31,19 +31,19 @@ class Recipe
     #conn = Faraday.new("http://localhost:4567")
 
     @cupboard = CupboardTalker.get_cupboard_for_user(user_id)
-    
-    if @cupboard['ingredients'].any? 
+
+    if @cupboard['ingredients'].any?
       ingredients = {'ingredients' => @cupboard['ingredients'].collect {|i| i['name']}}
     else
       ingredients = {'ingredients' => ['']}
     end
-    
+
     response = conn.post do |req|
       req.url "/by_ingredient"
       req.headers['Content-Type'] = 'application/json'
       req.body = ingredients.to_json
     end
-    
+
     recipe = JSON.parse(response.body)
     formatted_recipe = format_recipe_response(recipe)
     if recipe['recipe'].keys.include?('recipe')
@@ -52,7 +52,7 @@ class Recipe
       new(formatted_recipe)
     end
   end
-  
+
   def self.format_recipe_response(recipe)
     mapped_ingredients = recipe['ingredients'].map do |ingredient|
       {'ingredient' => ingredient}

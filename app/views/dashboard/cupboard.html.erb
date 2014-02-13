@@ -45,7 +45,7 @@
                   <td style='text-align:center'><%= submit_tag 'Update', :class => 'btn btn-small btn-success' %></td>
                   <% end %>
                   <td style='text-align:center'>
-                    <%= link_to drop_from_cupboard_path(ingredient['cupboard_ingredient_id']), :class => 'btn btn-small btn-danger', method: 'delete' do %>
+                    <%= link_to drop_from_cupboard_path(ingredient['cupboard_ingredient_id']), :class => 'btn btn-small btn-danger cupboard-remove', method: 'delete' do %>
                       <i class='radmin-icon radmin-remove'></i>
                       Discard
                     <% end %>
