@@ -39,8 +39,6 @@ class Recipe
       req.body = ingredients.to_json
     end
 
-    #raise response
-
     new(JSON.parse(response.body))
   end
 
